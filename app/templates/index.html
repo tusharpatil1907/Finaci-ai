@@ -63,7 +63,7 @@
                 <div class="navbar-nav w-100">
                     <a href="#" class="nav-item nav-link active"><i class="fa fa-home me-2"></i>Home</a>
                     <a href="/search" class="nav-item nav-link"><i class="fa fa-search me-2"></i>Predict</a>
-                    <a href="/ticker" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>Ticker Info</a>
+                    <a href="/ticker" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>Tickers List (Stocks)</a>
                 </div>
             </nav>
         </div>
@@ -109,13 +109,28 @@
                                 <h6 class="mb-0">Active Stocks</h6>
                                 <a href="">Show All</a>
                             </div>
-                            {% block Left_Plot %}
-
-                                {% autoescape off %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    {% block Left_Plot %}
+                                    
+                                    {% autoescape off %}
                                     {{ plot_div_left }}
-                                {% endautoescape %}
-
-                            {% endblock Left_Plot %}
+                                   
+                                    {% endautoescape %}
+                                    
+                                    {% endblock Left_Plot %}
+                                </div>
+                                <div class="col-md-6">
+                                    {% block right_plot %}
+                                    
+                                    {% autoescape off %}
+                                
+                                    {{ plot_div_right }}
+                                    {% endautoescape %}
+                                    
+                                    {% endblock right_plot %}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,7 +142,7 @@
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Trending Us stocks</h6>
+                        <h6 class="mb-0">Trending Us stocks (In dollars)</h6>
                         <a href="https://finance.yahoo.com/trending-tickers">Show All</a>
                     </div>
                     <div class="table-responsive">
@@ -166,7 +181,7 @@
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Trending Indian stocks</h6>
+                        <h6 class="mb-0">Trending Indian stocks (INR)</h6>
                         <a href="https://finance.yahoo.com/trending-tickers">Show All</a>
                     </div>
                     <div class="table-responsive">
@@ -201,6 +216,46 @@
                     </div>
                 </div>
             </div>
+
+            <!-- CRYPTO SECTION -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary text-center rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">Popular Cryptocurrencies today</h6>
+                        <a href="https://finance.yahoo.com/crypto//">Show All</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-white">
+                                    <th scope="col">Ticker</th>
+                                    <th scope="col">Open</th>
+                                    <th scope="col">High</th>
+                                    <th scope="col">Low</th>
+                                    <th scope="col">Close</th>
+                                    <th scope="col">Adj. Close</th>
+                                    <th scope="col">Volume</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if recent_stocks %}
+                                {% for i in crypto_symbols %}
+                                <tr>
+                                    <td>{{i.Ticker}}</td>
+                                    <td>{{i.Open}}</td>
+                                    <td>{{i.High}}</td>
+                                    <td>{{i.Low}}</td>
+                                    <td>{{i.Close}}</td>
+                                    <td>{{i.Adj_Close}}</td>
+                                    <td>{{i.Volume}}</td>
+                                </tr>
+                                {% endfor %}
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
             <!-- Recent Sales End -->
 
 
@@ -212,7 +267,7 @@
                             &copy; <a href="#">Patil Tushar</a>, All Right Reserved. 
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
-                            Designed By <a href="https://portfolio-website-azure-eta.vercel.app/">Kumar Laxmikant</a>
+                            Designed By <a href="https://portfolio-website-azure-eta.vercel.app/">TUSHAR PATIL</a>
                         </div>
                     </div>
                 </div>
