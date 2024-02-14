@@ -163,12 +163,12 @@
                                 {% for i in recent_stocks %}
                                 <tr>
                                     <td>{{i.Ticker}}</td>
-                                    <td>{{i.Open}}</td>
-                                    <td>{{i.High}}</td>
-                                    <td>{{i.Low}}</td>
-                                    <td>{{i.Close}}</td>
-                                    <td>{{i.Adj_Close}}</td>
-                                    <td>{{i.Volume}}</td>
+                                    <td>{{i.Open | floatformat:"2"}}</td>
+                                    <td>{{i.High | floatformat:"2"}}</td>
+                                    <td>{{i.Low | floatformat:"2"}}</td>
+                                    <td>{{i.Close | floatformat:"2"}}</td>
+                                    <td>{{i.Adj_Close | floatformat:"2"}}</td>
+                                    <td>{{i.Volume | floatformat:"2"}}</td>
                                 </tr>
                                 {% endfor %}
                                 {% endif %}
@@ -202,12 +202,12 @@
                                 {% for i in recent_indian_stocks %}
                                 <tr>
                                     <td>{{i.Ticker}}</td>
-                                    <td>{{i.Open}}</td>
-                                    <td>{{i.High}}</td>
-                                    <td>{{i.Low}}</td>
-                                    <td>{{i.Close}}</td>
-                                    <td>{{i.Adj_Close}}</td>
-                                    <td>{{i.Volume}}</td>
+                                    <td>{{i.Open | floatformat:"2"}}</td>
+                                    <td>{{i.High | floatformat:"2"}}</td>
+                                    <td>{{i.Low | floatformat:"2"}}</td>
+                                    <td>{{i.Close | floatformat:"2"}}</td>
+                                    <td>{{i.Adj_Close | floatformat:"2"}}</td>
+                                    <td>{{i.Volume | floatformat:"2"}}</td>
                                 </tr>
                                 {% endfor %}
                                 {% endif %}
@@ -242,12 +242,12 @@
                                 {% for i in crypto_symbols %}
                                 <tr>
                                     <td>{{i.Ticker}}</td>
-                                    <td>{{i.Open}}</td>
-                                    <td>{{i.High}}</td>
-                                    <td>{{i.Low}}</td>
-                                    <td>{{i.Close}}</td>
-                                    <td>{{i.Adj_Close}}</td>
-                                    <td>{{i.Volume}}</td>
+                                    <td>{{i.Open | floatformat:"2"}}</td>
+                                    <td>{{i.High | floatformat:"2"}}</td>
+                                    <td>{{i.Low | floatformat:"2"}}</td>
+                                    <td>{{i.Close | floatformat:"2"}}</td>
+                                    <td>{{i.Adj_Close | floatformat:"2"}}</td>
+                                    <td>{{i.Volume | floatformat:"2"}}</td>
                                 </tr>
                                 {% endfor %}
                                 {% endif %}

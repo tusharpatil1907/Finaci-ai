@@ -1,3 +1,4 @@
+import time
 from urllib import request
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -41,9 +42,10 @@ def index(request):
         interval='1d'
     
     )
-
+    # print(data)
     data.reset_index(level=0, inplace=True)
     # data.reset_index(level=0, inplace=True)
+    # print(data)
     
 
 
@@ -54,9 +56,9 @@ def index(request):
     fig_left.add_trace(
                 go.Scatter(x=data['Date'], y=data['AMZN']['Adj Close'], name="AMZN")
             )
-    fig_left.add_trace(
-                go.Scatter(x=data['Date'], y=data['QCOM']['Adj Close'], name="QCOM")
-            )
+    # fig_left.add_trace(
+    #             go.Scatter(x=data['Date'], y=data['QCOM']['Adj Close'], name="QCOM")
+    #         )
     fig_left.add_trace(
                 go.Scatter(x=data['Date'], y=data['META']['Adj Close'], name="META")
             )
@@ -82,26 +84,26 @@ def index(request):
     plot_div_right = plot(fig_right, auto_open=False, output_type='div')
 
     # ================================================ To show recent stocks ==============================================
-    
-    df1 = yf.download(tickers = 'AAPL', period='1d', interval='1d')
-    df2 = yf.download(tickers = 'AMZN', period='1d', interval='1d')
-    df3 = yf.download(tickers = 'GOOGL', period='1d', interval='1d')
-    df4 = yf.download(tickers = 'UBER', period='1d', interval='1d')
-    df5 = yf.download(tickers = 'TSLA', period='1d', interval='1d')
-    df6 = yf.download(tickers = 'NVDA', period='1d', interval='1d')
+    start = time.time()
+    df1 = yf.download(tickers = 'AAPL', threads=True, period='1d', interval='1d')
+    df2 = yf.download(tickers = 'AMZN', threads=True, period='1d', interval='1d')
+    df3 = yf.download(tickers = 'GOOGL', period='1d',threads=True, interval='1d')
+    df4 = yf.download(tickers = 'UBER', period='1d',threads=True, interval='1d')
+    df5 = yf.download(tickers = 'TSLA', period='1d',threads=True, interval='1d')
+    df6 = yf.download(tickers = 'NVDA', period='1d',threads=True, interval='1d')
 
     # indian stocks
-    df7 = yf.download(tickers = 'INFY.NS', period='1d', interval='1d')
-    df8 = yf.download(tickers = 'TCS.NS', period='1d', interval='1d')
-    df9 = yf.download(tickers = 'RELIANCE.NS', period='1d', interval='1d')
-    df10 = yf.download(tickers = 'MRF.NS', period='1d', interval='1d')
+    df7 = yf.download(tickers = 'INFY.NS', period='1d',threads=True, interval='1d')
+    df8 = yf.download(tickers = 'TCS.NS', period='1d', threads=True,interval='1d')
+    df9 = yf.download(tickers = 'RELIANCE.NS',threads=True, period='1d', interval='1d')
+    df10 = yf.download(tickers = 'MRF.NS',threads=True, period='1d', interval='1d')
 
 
     # crypto
-    df11 = yf.download(tickers = 'BTC-USD', period='1d', interval='1d')
-    df12 = yf.download(tickers = 'ETH-USD', period='1d', interval='1d')
-    df13 = yf.download(tickers = 'SOL-USD', period='1d', interval='1d')
-    df14 = yf.download(tickers = 'XRP-USD', period='1d', interval='1d')
+    df11 = yf.download(tickers = 'BTC-USD',threads=True, period='1d', interval='1d')
+    df12 = yf.download(tickers = 'ETH-USD',threads=True, period='1d', interval='1d')
+    df13 = yf.download(tickers = 'SOL-USD',threads=True, period='1d', interval='1d')
+    df14 = yf.download(tickers = 'XRP-USD',threads=True, period='1d', interval='1d')
     
     # US STONKS
     df1.insert(0, "Ticker", "APPLE.INC")
@@ -156,7 +158,7 @@ def index(request):
     json_records = crypto.reset_index().to_json(orient='records')
     crypto_symbols = []
     crypto_symbols = json.loads(json_records)
-
+    print(time.time()-start)
     # ========================================== Page Render section =====================================================
 
     return render(request, 'index.html', {
@@ -167,23 +169,13 @@ def index(request):
         'crypto_symbols': crypto_symbols
     })
 
+
 # search page
 def search(request):
     return render(request, 'search.html', {})
 
 
-# search result page
-def ticker(request):
-    # ================================================= Load Ticker Table ================================================
-    ticker_df = pd.read_csv('app/Data/new_tickers.csv') 
-    json_ticker = ticker_df.reset_index().to_json(orient ='records')
-    ticker_list = []
-    ticker_list = json.loads(json_ticker)
 
-
-    return render(request, 'ticker.html', {
-        'ticker_list': ticker_list
-    })
 
 
 
@@ -297,8 +289,7 @@ def predict(request, ticker_value, number_of_days):
 
     ticker = pd.read_csv('app/Data/Tickers.csv')
     to_search = ticker_value
-    ticker.columns = ['Symbol', 'Name', 'Last_Sale', 'Net_Change', 'Percent_Change', 'Market_Cap',
-                    'Country', 'IPO_Year', 'Volume', 'Sector', 'Industry']
+    ticker.columns = ['Symbol', 'Name', 'Last_Sale', 'Net_Change', 'Percent_Change', 'Market_Cap','Country', 'IPO_Year', 'Volume', 'Sector', 'Industry']
     for i in range(0,ticker.shape[0]):
         if ticker.Symbol[i] == to_search:
             Symbol = ticker.Symbol[i]
@@ -337,16 +328,52 @@ def predict(request, ticker_value, number_of_days):
                                                     })
 # need to implement later.....
 # search feature activation is needed
+from django.http import JsonResponse
 
-def search_ticker(request,symbol):
-    with open('app/Data/Tickers.csv ', newline='') as csvfile:
+# def   search_ticker(request,symbol):
+#     with open('app/Data/Tickers.csv ', newline='') as csvfile:
+#         reader = csv.DictReader(csvfile)
+#         for row in reader:
+#             a =row['Symbol'].find(symbol)
+#             if a == 0:
+#                 break
+#         else:
+#             return HttpResponse('not avl')
+#         # print(row)
+#         return HttpResponse('found')
+    # stock_search_app/views.py
+
+# search result page
+    # ================================================= Load Ticker Table ================================================
+def ticker(request):
+    # ticker_df = pd.read_csv('app/Data/new_tickers.csv') 
+    # json_ticker = ticker_df.reset_index().to_json(orient ='records')
+    # ticker_list = []
+    # ticker_list = json.loads(json_ticker)
+    # return render(request, 'ticker.html', {
+    #     'ticker_list': ticker_list
+    # })
+# def search_tickers(request):
+    if request.is_ajax():
+        query = request.GET.get('query')
+        if query:
+            results = filter_stocks(query)   
+            return JsonResponse({'results': results})
+    else:
+        # Load all tickers from the file
+        ticker_df = pd.read_csv('app/Data/Tickers.csv') 
+        json_ticker = ticker_df.reset_index().to_json(orient='records')
+        results = json.loads(json_ticker)
+        return render(request, 'ticker.html', {'ticker_list': results})
+
+    return render(request, 'ticker.html')
+
+def filter_stocks(query):
+    # Load CSV file and filter stocks based on query
+    results = []
+    with open('app/Data/raw.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            a =row['Symbol'].find(symbol)
-            if a == 0:
-                break
-        else:
-            return HttpResponse('not avl')
-        # print(row)
-        return HttpResponse('found')
-
+            if query.lower() in row['Symbol'].lower() or query.lower() in row['Name'].lower():
+                results.append({'number': row['number'], 'symbol': row['Symbol'], 'name': row['Name']})
+    return results
