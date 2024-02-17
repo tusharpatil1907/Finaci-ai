@@ -8,12 +8,13 @@ from plotly.offline import plot
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.graph_objs import Scatter
-
 import pandas as pd
 import numpy as np
 import json
-
+# .yf lib
 import yfinance as yf
+# yahoo fin lib
+from yahoo_fin.stock_info import *
 import datetime as dt
 import qrcode
 
@@ -23,16 +24,17 @@ from sklearn.linear_model import LinearRegression
 from sklearn import preprocessing, model_selection, svm
 from app.valid_tickers import Valid_Ticker
 
-
+from django.http import JsonResponse
 
 # The Home page when Server loads up
 def index(request):
     # ================================================= Left Card Plot =========================================================
     # Here we use yf.download function
+    tickers=['AAPL', 'AMZN', 'QCOM', 'META', 'NVDA', 'JPM','TCS.NS','INFY.NS','RELIANCE.NS']
     data = yf.download(
         
         # passes the ticker
-        tickers=['AAPL', 'AMZN', 'QCOM', 'META', 'NVDA', 'JPM','TCS.NS','INFY.NS','RELIANCE.NS'],
+        tickers,
         # tickers= Valid_Ticker
         group_by = 'ticker',
         
@@ -82,7 +84,15 @@ def index(request):
 
     plot_div_left = plot(fig_left, auto_open=False, output_type='div')
     plot_div_right = plot(fig_right, auto_open=False, output_type='div')
+    
 
+    # stocks={}
+    # for i in tickers:
+    #     # print(i)
+    #     details = get_quote_table(i)
+    #     stocks.update({i: details})
+
+    # print(stocks)
     # ================================================ To show recent stocks ==============================================
     start = time.time()
     df1 = yf.download(tickers = 'AAPL', threads=True, period='1d', interval='1d')
@@ -328,7 +338,7 @@ def predict(request, ticker_value, number_of_days):
                                                     })
 # need to implement later.....
 # search feature activation is needed
-from django.http import JsonResponse
+
 
 # def   search_ticker(request,symbol):
 #     with open('app/Data/Tickers.csv ', newline='') as csvfile:

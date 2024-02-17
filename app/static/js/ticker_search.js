@@ -1,6 +1,6 @@
 
 
-
+// for ticker section only
 $(document).ready(function() {
     // Function to fetch and render initial list of stocks
     function fetchInitialStocks() {
@@ -62,6 +62,17 @@ $(document).ready(function() {
     });
 });
 // Assuming you have an input field with id="search-input" and a div with id="ticker-list"
+
+
+
+
+// for home
+
+
+
+
+
+
 
 console.log("Script loaded");
 let searchInput = document.getElementById('search-input')
