@@ -21,9 +21,13 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('search/', search),
     path('predict/<str:ticker_value>/<str:number_of_days>/', predict),
     path('ticker/', ticker),
+# ajax query for dynamic ticker search. 
+    path('search/', search),
+# api section
+    # consider changing path of api from javascript in order to accept the informaation teansmitted from the server.
+    path('fetch-data/', fetch_data),
 
     # path('ticker/search/<str:symbol>', search_ticker),
 ]

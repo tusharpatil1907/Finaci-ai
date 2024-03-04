@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block sidebar %}
+
 <div class="container-fluid position-relative d-flex p-0">
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -49,26 +50,28 @@
                                 <h6 class="mb-0">Active Stocks</h6>
                                 <a href="">Show All</a>
                             </div>
+                            <div class="row py-4">
+                                {% block index_charts %}
+
+                                {% autoescape off %}
+                                
+                                {{ plot_div_index }}
+    
+                                {% endautoescape %}
+    
+                                {% endblock index_charts %}
+                                
+                                <!-- <div class="col-md-6" id="my-div">
+                                
+                                </div> -->
+                            </div>
                             <div class="row">
-                                <div class="col-md-6">
-                                    {% block Left_Plot %}
-
-                                    {% autoescape off %}
-                                    {{ plot_div_left }}
-
-                                    {% endautoescape %}
-
-                                    {% endblock Left_Plot %}
+                                <div class="col-md-6 py-4">
+                                   
                                 </div>
-                                <div class="col-md-6">
-                                    {% block right_plot %}
-
-                                    {% autoescape off %}
-
-                                    {{ plot_div_right }}
-                                    {% endautoescape %}
-
-                                    {% endblock right_plot %}
+                                
+                                <div class="col-md-6" id="my-div">
+                                
                                 </div>
                             </div>
                         </div>
@@ -85,35 +88,59 @@
                         <h6 class="mb-0">Trending Us stocks (In dollars)</h6>
                         <a href="https://finance.yahoo.com/trending-tickers">Show All</a>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-white">
-                                    <th scope="col">Ticker</th>
-                                    <th scope="col">Open</th>
-                                    <th scope="col">High</th>
-                                    <th scope="col">Low</th>
-                                    <th scope="col">Close</th>
-                                    <th scope="col">Adj. Close</th>
-                                    <th scope="col">Volume</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% if recent_stocks %}
-                                {% for i in recent_stocks %}
-                                <tr>
-                                    <td>{{i.Ticker}}</td>
-                                    <td>{{i.Open | floatformat:"2"}}</td>
-                                    <td>{{i.High | floatformat:"2"}}</td>
-                                    <td>{{i.Low | floatformat:"2"}}</td>
-                                    <td>{{i.Close | floatformat:"2"}}</td>
-                                    <td>{{i.Adj_Close | floatformat:"2"}}</td>
-                                    <td>{{i.Volume | floatformat:"2"}}</td>
-                                </tr>
-                                {% endfor %}
-                                {% endif %}
-                            </tbody>
-                        </table>
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            {% block Left_Plot %}
+
+                            {% autoescape off %}
+                            {{ plot_div_left }}
+
+                            {% endautoescape %}
+
+                            {% endblock Left_Plot %}
+                        </div>
+                        <div class="col-md-6">
+                            <div class="table-responsive">
+                                <table class="table text-start align-middle table-bordered table-hover mb-0">
+                                    <thead>
+                                        <tr class="text-white">
+                                            <th scope="col">Ticker</th>
+                                            <th scope="col">Open</th>
+                                            <th scope="col">High</th>
+                                            <th scope="col">Low</th>
+                                            <th scope="col">Close</th>
+                                            <th scope="col">Change</th>
+                                            <!-- <th scope="col">Volume</th> -->
+                                        </tr>
+                                    </thead>
+                                    <!-- <tbody>
+                                        {% if recent_stocks %}
+                                        {% for i in recent_stocks %}
+                                        <tr>
+                                            <td>{{i.Ticker}}</td>
+                                            <td>{{i.Open | floatformat:"2"}}</td>
+                                            <td>{{i.High | floatformat:"2"}}</td>
+                                            <td>{{i.Low | floatformat:"2"}}</td>
+                                            <td>{{i.Close | floatformat:"2"}}</td>
+                                            <td>{{i.Adj_Close | floatformat:"2"}}</td>
+                                            <td>{{i.Volume | floatformat:"2"}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                        {% endif %}
+                                    </tbody> -->
+                                    <tbody id="US-stocks"><tr id="update">
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <!-- <td>Loading...</td> -->
+                                    </tr></tbody>
+                                </table>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,35 +151,59 @@
                         <h6 class="mb-0">Trending Indian stocks (INR)</h6>
                         <a href="https://finance.yahoo.com/trending-tickers">Show All</a>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-white">
-                                    <th scope="col">Ticker</th>
-                                    <th scope="col">Open</th>
-                                    <th scope="col">High</th>
-                                    <th scope="col">Low</th>
-                                    <th scope="col">Close</th>
-                                    <th scope="col">Adj. Close</th>
-                                    <th scope="col">Volume</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% if recent_stocks %}
-                                {% for i in recent_indian_stocks %}
-                                <tr>
-                                    <td>{{i.Ticker}}</td>
-                                    <td>{{i.Open | floatformat:"2"}}</td>
-                                    <td>{{i.High | floatformat:"2"}}</td>
-                                    <td>{{i.Low | floatformat:"2"}}</td>
-                                    <td>{{i.Close | floatformat:"2"}}</td>
-                                    <td>{{i.Adj_Close | floatformat:"2"}}</td>
-                                    <td>{{i.Volume | floatformat:"2"}}</td>
-                                </tr>
-                                {% endfor %}
-                                {% endif %}
-                            </tbody>
-                        </table>
+                    <div class="row" style="min-height: 400px;">
+                        <div class="col-md-6">
+                            <div class="table-responsive">
+                                <table class="table text-start align-middle table-bordered table-hover mb-0">
+                                    <thead>
+                                        <tr class="text-white">
+                                            <th scope="col">Ticker</th>
+                                            <th scope="col">Open</th>
+                                            <th scope="col">High</th>
+                                            <th scope="col">Low</th>
+                                            <th scope="col">Close</th>
+                                            <th scope="col">Change</th>
+                                            <!-- <th scope="col">Volume</th> -->
+                                        </tr>
+                                    </thead>
+                                    <!-- <tbody>
+                                        {% if recent_stocks %}
+                                        {% for i in recent_indian_stocks %}
+                                        <tr>
+                                            <td>{{i.Ticker}}</td>
+                                            <td>{{i.Open | floatformat:"2"}}</td>
+                                            <td>{{i.High | floatformat:"2"}}</td>
+                                            <td>{{i.Low | floatformat:"2"}}</td>
+                                            <td>{{i.Close | floatformat:"2"}}</td>
+                                            <td>{{i.Adj_Close | floatformat:"2"}}</td>
+                                            <td>{{i.Volume | floatformat:"2"}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                        {% endif %}
+                                    </tbody> -->
+                                    <tbody id="indian">
+                                        <tr id="update">
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <!-- <td>Loading...</td> -->
+                                    </tr></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            {% block right_plot %}
+
+                            {% autoescape off %}
+
+                            {{ plot_div_right }}
+                            {% endautoescape %}
+
+                            {% endblock right_plot %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -164,40 +215,189 @@
                         <h6 class="mb-0">Popular Cryptocurrencies today</h6>
                         <a href="https://finance.yahoo.com/crypto//">Show All</a>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-white">
-                                    <th scope="col">Ticker</th>
-                                    <th scope="col">Open</th>
-                                    <th scope="col">High</th>
-                                    <th scope="col">Low</th>
-                                    <th scope="col">Close</th>
-                                    <th scope="col">Adj. Close</th>
-                                    <th scope="col">Volume</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% if recent_stocks %}
-                                {% for i in crypto_symbols %}
-                                <tr>
-                                    <td>{{i.Ticker}}</td>
-                                    <td>{{i.Open | floatformat:"2"}}</td>
-                                    <td>{{i.High | floatformat:"2"}}</td>
-                                    <td>{{i.Low | floatformat:"2"}}</td>
-                                    <td>{{i.Close | floatformat:"2"}}</td>
-                                    <td>{{i.Adj_Close | floatformat:"2"}}</td>
-                                    <td>{{i.Volume | floatformat:"2"}}</td>
-                                </tr>
-                                {% endfor %}
-                                {% endif %}
-                            </tbody>
-                        </table>
+                    <div class="row">
+                        <div class="col-md-6">
+                            {% block asd %}
+
+                            {% autoescape off %}
+                            {{ plot_div_crypto }}
+
+                            {% endautoescape %}
+
+                            {% endblock asd %}
+                        </div>
+                        <div class="col-md-6" >
+                            
+                            <div class="table-responsive">
+                                <table class="table text-start align-middle table-bordered table-hover mb-0 h-100">
+                                    <thead>
+                                        <tr class="text-white">
+                                            <th scope="col">Ticker</th>
+                                            <th scope="col">Open</th>
+                                            <th scope="col">High</th>
+                                            <th scope="col">Low</th>
+                                            <th scope="col">Close</th>
+                                            <th scope="col">Change</th>
+                                            <!-- <th scope="col">Volume</th> -->
+                                        </tr>
+                                    </thead>
+                                    <!-- <tbody>
+                                        {% if recent_stocks %}
+                                        {% for i in crypto %}
+                                        <tr>
+                                            <td>{{i.Ticker}}</td>
+                                            <td>{{i.Open | floatformat:"2"}}</td>
+                                            <td>{{i.High | floatformat:"2"}}</td>
+                                            <td>{{i.Low | floatformat:"2"}}</td>
+                                            <td>{{i.Close | floatformat:"2"}}</td>
+                                            <td>{{i.Adj_Close | floatformat:"2"}}</td>
+                                            <td>{{i.Volume | floatformat:"2"}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                        {% endif %}
+                                    </tbody> -->
+                                    <tbody id="crypto">
+                                        <tr id="update">
+                                            <td>Loading...</td>
+                                            <td>Loading...</td>
+                                            <td>Loading...</td>
+                                            <td>Loading...</td>
+                                            <td>Loading...</td>
+                                            <td>Loading...</td>
+                                            <!-- <td>Loading...</td> -->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
                     </div>
+                    
                 </div>
+            </div>
+            <div id="plot_div_left">
+                
             </div>
             <!-- Recent Sales End -->
 
+              <script>
+    // Declare variables to hold fetched data
+    let USstocks = [];
+    let crypto = [];
+    let indian = [];
+
+    // Asynchronously fetch data
+    fetch('fetch-data/')
+    .then(response => response.json())
+    .then(data => {
+        // Store fetched data in a variable
+        USstocks = data.recent_stocks;
+        cryptoData = data.crypto;
+        indian = data.recent_indian_stocks;
+
+        // Call a function to update the HTML table
+        updateCrypto();
+        updateIndianStocks();
+        updateUsStocks();
+
+        // Hide skeleton loaders
+        document.getElementById('update').style.display = 'none';
+        // document.getElementById('US-stocks').style.display = 'none';
+        // document.getElementById('indian').style.display = 'none';
+    })
+    .catch(error => console.error('Error fetching data:', error));
+
+    // Function to update the HTML table
+    function updateCrypto() {
+        // Access the HTML table element
+        const tableBody = document.getElementById('crypto');
+
+        // Clear existing rows
+        tableBody.innerHTML = '';
+
+        // Loop through fetched data and create table rows
+        cryptoData.forEach(stock => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${stock.Ticker}</td>
+                <td>${stock.Open.toFixed(2)}</td>
+                <td>${stock.High.toFixed(2)}</td>
+                <td>${stock.Low.toFixed(2)}</td>
+                <td>${stock.Close.toFixed(2)}</td>
+                <td class="${stock.Change < 0 ? "text-danger": stock.Change>0 ? "text-success": "text-white" }">${stock.Change.toFixed(2)}</td>
+
+                `;
+                //<td>${stock.Volume.toFixed(2)}</td>
+                // <td>${stock.Adj_Close.toFixed(2)}</td>
+            tableBody.appendChild(tr);
+        });
+    }
+    function updateUsStocks() {
+        // Access the HTML table element
+        const tableBody = document.getElementById('US-stocks');
+
+        // Clear existing rows
+        tableBody.innerHTML = '';
+
+        // Loop through fetched data and create table rows
+        USstocks.forEach(stock => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${stock.Ticker}</td>
+                <td>${stock.Open.toFixed(2)}</td>
+                <td>${stock.High.toFixed(2)}</td>
+                <td>${stock.Low.toFixed(2)}</td>
+                <td>${stock.Close.toFixed(2)}</td>
+                <td class="${stock.Change < 0 ? "text-danger": stock.Change>0 ? "text-success": "text-white" }">${stock.Change.toFixed(2)}</td>
+
+                `;
+                // <td>${stock.Volume.toFixed(2)}</td>
+                // <td>${stock.Adj_Close.toFixed(2)}</td>
+            tableBody.appendChild(tr);
+        });
+    }
+    function updateIndianStocks() {
+        // Access the HTML table element
+        const tableBody = document.getElementById('indian');
+
+        // Clear existing rows
+        tableBody.innerHTML = '';
+
+        // Loop through fetched data and create table rows
+        // indian.forEach(stock => {
+        //     const tr = document.createElement('tr');
+        //     tr.innerHTML = `
+        //         <td>${stock.Ticker}</td>
+        //         <td>${stock.Open.toFixed(2)}</td>
+        //         <td>${stock.High.toFixed(2)}</td>
+        //         <td>${stock.Low.toFixed(2)}</td>
+        //         <td>${stock.Close.toFixed(2)}</td>
+        //         <td class="${stock.Change<0 ? "text-danger" : "text-white";}">${stock.Change.toFixed(2)}</td>
+        //         <td>${stock.Volume.toFixed(2)}</td>
+        //         `;
+        //         tableBody.appendChild(tr);
+        //         // <td style='color:red'>${stock.Change.toFixed(2)}</td>
+        //         // <td>${stock.Adj_Close.toFixed(2)}</td>
+        // });
+        indian.forEach(stock => {
+    // console.log("Stock Change:", stock.Change); // Add this line for debugging
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+        <td>${stock.Ticker}</td>
+        <td>${stock.Open.toFixed(2)}</td>
+        <td>${stock.High.toFixed(2)}</td>
+        <td>${stock.Low.toFixed(2)}</td>
+        <td>${stock.Close.toFixed(2)}</td>
+        <td class="${stock.Change < 0 ? "text-danger": stock.Change>0 ? "text-success": "text-white" }">${stock.Change.toFixed(2)}</td>
+        `;
+        tableBody.appendChild(tr);
+    });
+    // <td>${stock.Volume.toFixed(2)}</td>
+
+    }
+</script>
+
             {% endblock %}
 
-          
+ 
+        
