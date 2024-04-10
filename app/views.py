@@ -251,7 +251,6 @@ def search(request):
 
 
 
-
 # The Predict Function to implement Machine Learning as well as Plotting
 def predict(request, ticker_value, number_of_days):
     try:
@@ -538,6 +537,23 @@ def ticker(request):
     else:
         # Load all tickers from the file
         ticker_df = pd.read_csv('app/Data/Tickers.csv') 
+        json_ticker = ticker_df.reset_index().to_json(orient='records')
+        results = json.loads(json_ticker)
+        return render(request, 'ticker.html', {'ticker_list': results})
+
+    return render(request, 'ticker.html')
+
+
+def crypto_ticker(request):
+
+    if request.is_ajax():
+        query = request.GET.get('query')
+        if query:
+            results = filter_stocks(query)   
+            return JsonResponse({'results': results})
+    else:
+        # Load all tickers from the file
+        ticker_df = pd.read_csv('app/Data/raw.csv') 
         json_ticker = ticker_df.reset_index().to_json(orient='records')
         results = json.loads(json_ticker)
         return render(request, 'ticker.html', {'ticker_list': results})
