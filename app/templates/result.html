@@ -32,7 +32,38 @@
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .signal-box {
+            width: 250px;
+            padding: 20px;
+            background-color: green;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 50px auto;
+        }
+        .buy-signal {
+            color: #70c273;
+            
+        }
+        .sell-signal {
+            color: #f44336;
+        }
+        .signal-text {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+        .comment{
+            font-style: 8px;
+            font-weight: bold;
+            color: whitesmoke;
+        }
+    </style>
     <!-- charts  -->
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -220,7 +251,44 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12">
-                        <!-- fas -->
+                        {%if recommendationKey == 'buy' %}
+                        <div class="signal-box">
+                            <div class="signal-text">
+                                BUY
+                            </div>
+                            <div class="buy-signal">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9H18V11H6V9Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 6.29289C16.0976 6.68342 16.0976 7.31658 15.7071 7.70711L11.7071 11.7071C11.3166 12.0976 10.6834 12.0976 10.2929 11.7071L8.29289 9.70711C7.90237 9.31658 7.90237 8.68342 8.29289 8.29289C8.68342 7.90237 9.31658 7.90237 9.70711 8.29289L11 9.58579L14.2929 6.29289C14.6834 5.90237 15.3166 5.90237 15.7071 6.29289Z" fill="white"/>
+                                </svg>
+                                <p class="comment">We beleve its great time to buy </p>
+                            </div>
+                        </div>
+                        {%elif recommendationKey == 'none' %}
+                        <div class="signal-box" style="background-color: grey;">
+                            <div class="signal-text">
+                                Our team is looking for this ticker. Soon you will get the recomendation 
+                            </div>
+                        </div>
+                        {%else%}
+                        <div class="signal-box" style="background-color: red;">
+                            <div class="signal-text">
+                                SELL
+                            </div>
+                            <div class="sell-signal">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- #f44336 -->
+                                    <path d="M6 9H18V11H6V9Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 6.29289C16.0976 6.68342 16.0976 7.31658 15.7071 7.70711L11.7071 11.7071C11.3166 12.0976 10.6834 12.0976 10.2929 11.7071L8.29289 9.70711C7.90237 9.31658 7.90237 8.68342 8.29289 8.29289C8.68342 7.90237 9.31658 7.90237 9.70711 8.29289L11 9.58579L14.2929 6.29289C14.6834 5.90237 15.3166 5.90237 15.7071 6.29289Z" fill="white"/>
+                                </svg>
+                                <p class="comment">Our recomendation it to book profits for now.</p>
+
+                            </div>
+                        </div>
+                        {%endif%}
+                        <!-- #4caf50 -->
+                        
+                        
                     </div>
                     <div class="col-md-9 col-sm-12">
                         <div class="bg-secondary text-center rounded p-4">

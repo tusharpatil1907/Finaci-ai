@@ -23,6 +23,7 @@ urlpatterns = [
     path('', index),
     path('predict/<str:ticker_value>/<str:number_of_days>/', predict),
     path('ticker/', ticker),
+    # new added...
     path('ticker/crypto/', crypto_ticker),
 
 # ajax query for dynamic ticker search. 

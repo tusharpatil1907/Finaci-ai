@@ -553,7 +553,7 @@ def crypto_ticker(request):
             return JsonResponse({'results': results})
     else:
         # Load all tickers from the file
-        ticker_df = pd.read_csv('app/Data/raw.csv') 
+        ticker_df = pd.read_csv('app/Data/crypto_list.csv') 
         json_ticker = ticker_df.reset_index().to_json(orient='records')
         results = json.loads(json_ticker)
         return render(request, 'ticker.html', {'ticker_list': results})
