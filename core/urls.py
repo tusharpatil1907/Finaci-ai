@@ -31,5 +31,7 @@ urlpatterns = [
 # api section
     # consider changing path of api from javascript in order to accept the informaation teansmitted from the server.
     path('fetch-data/', fetch_data),
+    path('user/', include('django.contrib.auth.urls')),
+    path('user/signup/',signup),
     # path('ticker/search/<str:symbol>', search_ticker),
 ]

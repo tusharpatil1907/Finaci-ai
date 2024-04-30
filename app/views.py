@@ -1,6 +1,6 @@
 import time
 from urllib import request
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.template import RequestContext
 import csv
@@ -27,10 +27,12 @@ from sklearn import preprocessing, model_selection, svm
 from app.valid_tickers import Valid_Ticker
 import threading
 from django.http import JsonResponse
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
-
-
+@login_required(login_url='/user/login/')
 def index(request):
     tickers=['AAPL', 'AMZN', 'QCOM', 'META', 'NVDA', 'JPM','TCS.NS','INFY.NS','RELIANCE.NS','BTC-USD','ETH-USD','SOL-USD','XRP-USD','^NSEI']
     data = yf.download(
@@ -250,8 +252,8 @@ def search(request):
 
 
 
-
 # The Predict Function to implement Machine Learning as well as Plotting
+@login_required(login_url='/user/login/')
 def predict(request, ticker_value, number_of_days):
     try:
         
@@ -520,6 +522,7 @@ def get_last_n_years_data(ticker, n):
 
 # search result page
     # ================================================= Load Ticker Table ================================================
+# @login_required(login_url='/user/login/')
 def ticker(request):
     # ticker_df = pd.read_csv('app/Data/new_tickers.csv') 
     # json_ticker = ticker_df.reset_index().to_json(orient ='records')
@@ -569,3 +572,37 @@ def filter_stocks(query):
             if query.lower() in row['Symbol'].lower() or query.lower() in row['Name'].lower():
                 results.append({'number': row['number'], 'symbol': row['Symbol'], 'name': row['Name']})
     return results
+
+
+# user authintication
+def signup(request):
+    if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        username = request.POST['username']
+        email = request.POST['email']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+        user = authenticate(username=username, password1=password1, password2=password2)
+
+        if password1 == password2:
+            if User.objects.filter(username=username).exists():
+                # errors['username'] = 'This username is already taken.'
+                return HttpResponse('An account with this username already exists.')
+                time.sleep(2)
+                return redirect('login')
+            if User.objects.filter(email=email).exists():
+                return HttpResponse('An account with this email already exists.')
+                time.sleep(2)
+                return redirect('login')
+
+            else:
+                user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username,
+                                                email=email, password=password1)
+                user.save()
+                login(request, user)
+                return redirect('/')
+        else:
+            return HttpResponse('pass dont match')
+
+    return render(request, 'registration/sign_up.html')

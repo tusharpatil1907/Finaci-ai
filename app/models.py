@@ -18,3 +18,5 @@ class Project(models.Model):
         if self.week_number == "":
             self.week_number = self.start_date.isocalendar()[1]
         super().save(*args, **kwargs)
+
+# dev auth_user(models.Model):
