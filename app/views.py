@@ -556,9 +556,9 @@ def crypto_ticker(request):
         ticker_df = pd.read_csv('app/Data/crypto_list.csv') 
         json_ticker = ticker_df.reset_index().to_json(orient='records')
         results = json.loads(json_ticker)
-        return render(request, 'ticker.html', {'ticker_list': results})
+        return render(request, 'crypto_tik.html', {'ticker_list': results})
 
-    return render(request, 'ticker.html')
+    return render(request, 'crypto_tik.html')
 
 def filter_stocks(query):
     # Load CSV file and filter stocks based on query
