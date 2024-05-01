@@ -39,7 +39,7 @@
         <!-- Spinner Start -->
         <div id="spinner"
             class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
@@ -50,7 +50,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="../" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Finaci-Ai</h3>
+                    <h3 class="text-success"><i class="fa fa-user-edit me-2"></i>Finaci-Ai</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -62,14 +62,14 @@
                     </div>
                     <div class="ms-3">
                         <h6 class="mb-0">Welcome</h6>
-                        <span>Guest</span>
+                        <span>{{user.username}}</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="../" class="nav-item nav-link"><i class="fa fa-home me-2"></i>Home</a>
                     <a href="#" class="nav-item nav-link active"><i class="fa fa-search me-2"></i>Predict</a>
                     <a href="/ticker/" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>Ticker Info</a>
-                    <a href="/crypto/ticker/" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>Ticker Info</a>
+                    <a href="/ticker/crypto/" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>Ticker Info</a>
                 </div>
             </nav>
         </div>
@@ -92,9 +92,10 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="{% static 'image/user.png' %}" alt=""
                                 style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">Guest</span>
+                            <span class="d-none d-lg-inline-flex">{{user.username}}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="user/logout/" class="dropdown-item text-danger">Logout</a>
                             <a href="/search" class="dropdown-item">Predict</a>
                             <a href="/ticker" class="dropdown-item">Ticker Info</a>
                         </div>
@@ -127,9 +128,9 @@
                                     <label for="days">Number of Days</label>
                                 </div>
                                 <div class="d-flex align-items-center text-success justify-content-between mb-4">
-                                    <a class="text-success" href="../ticker">Search Ticker Value</a>
+                                    <a class="text-info" href="../ticker">Search Ticker Value</a>
                                 </div>
-                                <button type="submit" class="btn btn-primary py-3 w-100 mb-4"
+                                <button type="submit" class="btn btn-success py-3 w-100 mb-4"
                                     onclick="LoadURL()">Predict</button>
                                 <script type="text/javascript">
                                     function LoadURL() {
@@ -168,9 +169,9 @@
                                     <label for="days">Number of Days</label>
                                 </div>
                                 <div class="d-flex align-items-center text-success justify-content-between mb-4">
-                                    <a class="text-success" href="../ticker">Search Ticker Value</a>
+                                    <a class="text-info" href="../ticker/crypto/">Search Ticker Value</a>
                                 </div>
-                                <button type="submit" class="btn btn-primary py-3 w-100  mb-4"
+                                <button type="submit" class="btn btn-success py-3 w-100  mb-4"
                                     onclick="LoadURL()">Predict</button>
                                 <script type="text/javascript">
                                     function LoadURL() {
@@ -223,7 +224,7 @@
 
         </script>
         <!-- Back to Top -->
-        <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
+        <a href="#" class="btn btn-lg btn-success btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->

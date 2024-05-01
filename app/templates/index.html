@@ -7,7 +7,7 @@
 <div class="container-fluid position-relative d-flex p-0">
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
@@ -17,7 +17,7 @@
     <div class="sidebar pe-4 pb-3">
         <nav class="navbar bg-secondary navbar-dark">
             <a href="#" class="navbar-brand mx-4 mb-3">
-                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Finaci-Ai</h3>
+                <h3 class="text-success"><i class="fa fa-user-edit me-2"></i>Finaci-Ai</h3>
             </a>
             <div class="d-flex align-items-center ms-4 mb-4">
                 <div class="position-relative">
@@ -26,7 +26,7 @@
                 </div>
                 <div class="ms-3">
                     <h6 class="mb-0">Welcome</h6>
-                    <span>Guest</span>
+                    <span>{{user.username}}</span>
                 </div>
             </div>
             <div class="navbar-nav w-100">
@@ -49,7 +49,7 @@
                     <div class="col-sm-12 col-xl-12">
                         <div class="bg-secondary text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Popular Indices</h6>
+                                <h4 class="mb-0 text-success">NIFTY 50</h4>
                                 <a href="">Show All</a>
                             </div>
                             <div class="row py-4">
@@ -87,7 +87,7 @@
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Trending Us stocks (In dollars)</h6>
+                        <h4 class="mb-0 text-success">Trending Us stocks (In dollars)</h4>
                         <a href="https://finance.yahoo.com/trending-tickers">Show All</a>
                     </div>
                     <div class="row">
@@ -150,7 +150,7 @@
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Trending Indian stocks (INR)</h6>
+                        <h4 class="mb-0 text-success">Trending Indian stocks (INR)</h4>
                         <a href="https://finance.yahoo.com/trending-tickers">Show All</a>
                     </div>
                     <div class="row" style="min-height: 400px;">
@@ -214,7 +214,7 @@
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Popular Cryptocurrencies today</h6>
+                        <h4 class="mb-0 text-success">Popular Cryptocurrencies today</h4>
                         <a href="https://finance.yahoo.com/crypto//">Show All</a>
                     </div>
                     <div class="row">
