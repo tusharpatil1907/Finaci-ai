@@ -27,12 +27,13 @@ from sklearn import preprocessing, model_selection, svm
 from app.valid_tickers import Valid_Ticker
 import threading
 from django.http import JsonResponse
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import authenticate, logout
+from django.contrib.auth import login as auth_login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 
-@login_required(login_url='/user/login/')
+# @login_required(login_url='/user/login/')
 def index(request):
     tickers=['AAPL', 'AMZN', 'QCOM', 'META', 'NVDA', 'JPM','TCS.NS','INFY.NS','RELIANCE.NS','BTC-USD','ETH-USD','SOL-USD','XRP-USD','^NSEI']
     data = yf.download(
@@ -143,9 +144,6 @@ def fetch_data(request):
     # Crypto
     crypto_symbols = ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']
     crypto = download_and_process(crypto_symbols)
-
-    
-
    
     print(time.time() - start)
     data= {
@@ -313,7 +311,7 @@ def predict(request, ticker_value, number_of_days):
 
 
     try:
-        df_ml = yf.download(tickers = ticker_value, period='2y', interval='1h')
+        df_ml = yf.download(tickers = ticker_value, period='2y', interval='1d')
     except:
         ticker_value = 'AAPL'
         df_ml = yf.download(tickers = ticker_value, period='2y', interval='1m')
@@ -523,7 +521,6 @@ def get_last_n_years_data(ticker, n):
 # search result page
     # ================================================= Load Ticker Table ================================================
 # @login_required(login_url='/user/login/')
-def ticker(request):
     # ticker_df = pd.read_csv('app/Data/new_tickers.csv') 
     # json_ticker = ticker_df.reset_index().to_json(orient ='records')
     # ticker_list = []
@@ -532,6 +529,7 @@ def ticker(request):
     #     'ticker_list': ticker_list
     # })
 # def search_tickers(request):
+def ticker(request):
     if request.is_ajax():
         query = request.GET.get('query')
         if query:
@@ -606,3 +604,21 @@ def signup(request):
             return HttpResponse('pass dont match')
 
     return render(request, 'registration/sign_up.html')
+
+
+def logout_user(request):
+    logout(request)
+    return redirect('/')
+    
+def login(request):
+    if request.method=='POST':
+
+        username = request.POST.get('uname')
+        password = request.POST.get('pass')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            auth_login(request, user)
+            print('success')
+            return redirect('/')    
+        return render(request, 'registration/login.html', {'error_message': 'Invalid login'})
+    return render(request,'registration/login.html')
