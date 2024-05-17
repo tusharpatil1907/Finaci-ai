@@ -118,8 +118,33 @@
                     <i class="fa fa-bars"></i>
                 </a>
                 
-                <div class="navbar-nav align-items-center ms-auto">
+                <div class="navbar-nav align-items-center ">
                     <div class="nav-item dropdown">
+                        {% if user.is_authenticated %}
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="{% static 'image/user.png' %}" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">{{user.username}}</span>
+                        </a> 
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="/user/logout/" class="dropdown-item text-danger">Logout</a>
+                            <a href="/search" class="dropdown-item">Predict</a>
+                            <a href="/ticker" class="dropdown-item">Ticker Info</a>
+                        </div>
+
+                        {% else %}
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="{% static 'image/user.png' %}" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">Guest user</span>
+                        </a> 
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="/user/login/" class="dropdown-item text-danger">Login/signup</a>
+                            <a href="/search" class="dropdown-item">Predict</a>
+                            <a href="/ticker" class="dropdown-item">Ticker Info</a>
+                        </div>
+                        {% endif %}
+                        
+                    </div>
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="{% static 'image/user.png' %}" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">{{user.username}}</span>
@@ -129,7 +154,7 @@
                             <a href="/search" class="dropdown-item">Predict</a>
                             <a href="/ticker" class="dropdown-item">Ticker Info</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </nav>
             <!-- Navbar End -->

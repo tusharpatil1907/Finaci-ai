@@ -10,16 +10,20 @@
     <div class="container bg-secondary mt-5">
     <div class="mb-3">
         <label for="email" class="form-label">Email address</label>
-        <input id="email" name="username" type="text" required
+        <input id="email" name="uname" type="text" required
                class="form-control">
     </div>
 
     <div class="mb-3">
         <div class="d-flex justify-content-between align-items-center">
-            <label for="password" class="form-label">Password</label>
-            <a href="#" class="font-weight-bold text-primary">Forgot password?</a>
+            <label for="pass" class="form-label">Password</label>
+            <div>
+                <a href="#" class="font-weight-bold text-primary">Forgot password?</a>/
+                <a href="/user/signup/" class="font-weight-bold text-primary">New user?</a>
+
+            </div>
         </div>
-        <input id="password" name="password" type="password" autocomplete="current-password" required
+        <input id="password" name="pass" type="password" autocomplete="current-password" required
                class="form-control">
     </div>
 
@@ -30,7 +34,9 @@
         </button>
     </div>
     </div>
-</form><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</form>
+{{error_message}}
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 {% endblock %}
 {% block footer %}
