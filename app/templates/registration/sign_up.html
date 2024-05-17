@@ -8,13 +8,13 @@
 
 <form method="post">
     {% csrf_token %}
-    <div class="container bg-secondary mt-4 ">
+    <!-- <div class="container bg-secondary mt-4 ">
         <div class="row">
             <div class="col-md-6">
                 <label for="first_name" class="form-label">First name</label>
                 <input type="text" name="first_name" id="first_name" class="form-control" required>
             </div>
-           <div class="col-md-6">
+            <div class="col-md-6">
                 <div class="mb-4">
                     <label for="last_name" class="form-label">Last Name</label>
                     <input type="text" name="last_name" id="last_name" class="form-control" required>
@@ -43,11 +43,84 @@
             <label for="confirm_password" class="form-label">Confirm Password</label>
             <input type="password" name="password2" id="confirm_password" class="form-control" required>
         </div>
-            {#    {% endfor %} #}
+        {# {% endfor %} #}
         <div class="mt-6">
             <button type="submit" class="btn btn-success d-block mx-auto">Sign Up</button>
         </div>
+    </div> -->
+
+
+
+
+
+    <!-- Login 2 - Bootstrap Brain Component -->
+    <div class="bg-secondary py-3 py-md-5">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6">
+                    <div class="bg-white p-4 p-md-5 rounded shadow-sm">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-5">
+                                    <h3 class="text-warning">Sign Up</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="#!">
+                            <div class="row gy-3 gy-md-4 overflow-hidden">
+                                <div class="col-12">
+                                    <label for="email" class="form-label">First name <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="first_name" id="first_name"
+                                        placeholder="First Name" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="password" class="form-label">Last Name <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="last_name" id="last_name" value=""
+                                        placeholder="Last Name" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Username <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="username" id="username"
+                                        placeholder="UserName" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="password" class="form-label">Email <span
+                                            class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" name="email" id="email" value=""
+                                        placeholder="Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Password <span
+                                            class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" name="password1" id="password1"
+                                        placeholder="Password" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="password" class="form-label">Confirm Password <span
+                                            class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" name="password2" id="Confirm Password"
+                                        value="" placeholder="Confirm Password" required>
+                                </div>
+                                {# {% endfor %} #}
+                                <div class="col-12">
+                                    <div class="d-grid">
+                                        <button class="btn btn-lg btn-primary bg-success" type="submit">Sign Up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
 </form>
 
 {% endblock %}

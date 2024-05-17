@@ -622,3 +622,6 @@ def login(request):
             return redirect('/')    
         return render(request, 'registration/login.html', {'error_message': 'Invalid login'})
     return render(request,'registration/login.html')
+
+def about(request):
+    return render(request, 'about.html')

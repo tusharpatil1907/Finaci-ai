@@ -36,4 +36,5 @@ urlpatterns = [
     path('user/logout/',logout_user),
     path('user/login/',login),
     # path('ticker/search/<str:symbol>', search_ticker),
+    path('about/', about),
 ]  
