@@ -7,40 +7,105 @@
 {% block content %}
 <form class="space-y-3" action="#" method="POST">
     {% csrf_token %}
-    <div class="container bg-secondary mt-5">
-    <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input id="email" name="uname" type="text" required
-               class="form-control">
-    </div>
+    <!-- <h1 class="text-center">Login</h1>
+    <div class="container bg-secondary mt-5 ">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email / UserName</label>
+            <input id="email" name="uname" type="text" required class="form-control">
+        </div>
 
-    <div class="mb-3">
-        <div class="d-flex justify-content-between align-items-center">
-            <label for="pass" class="form-label">Password</label>
-            <div>
-                <a href="#" class="font-weight-bold text-primary">Forgot password?</a>/
-                <a href="/user/signup/" class="font-weight-bold text-primary">New user?</a>
+        <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <label for="pass" class="form-label">Password</label>
+                <div>
+                    <a href="#" class="font-weight-bold text-primary">Forgot password?</a>/
+                    <a href="/user/signup/" class="font-weight-bold text-primary">New user?</a>
 
+                </div>
+            </div>
+            <input id="password" name="pass" type="password" autocomplete="current-password" required
+                class="form-control">
+        </div>
+
+        <div class="mb-3    ">
+            <button type="submit" class="btn btn-success d-block mx-auto">
+                Log in
+            </button>
+        </div>
+    </div> -->
+
+
+    <!-- Login 2 - Bootstrap Brain Component -->
+    <div class="bg-secondary py-3 py-md-5">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6">
+                    <div class="bg-white p-4 p-md-5 rounded shadow-sm">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-5 ">
+                                    <h3 class="text-warning">Log in</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="#!">
+                            <div class="row gy-3 gy-md-4 overflow-hidden">
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email or UserName <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="uname" id="email"
+                                        placeholder="name@example.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="password" class="form-label">Password <span
+                                            class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" name="pass" id="password" value=""
+                                        required>
+                                </div>
+                                <!-- <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" name="remember_me"
+                                            id="remember_me">
+                                        <label class="form-check-label text-secondary" for="remember_me">
+                                            Keep me logged in
+                                        </label>
+                                    </div>
+                                </div> -->
+                                <div class="col-12">
+                                    <div class="d-grid">
+                                        <button class="btn btn-lg btn-primary bg-success" type="submit">Log in now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <div class="col-12">
+                                <hr class="mt-5 mb-4 border-secondary-subtle">
+                                <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end">
+                                    <a href="/user/signup/" class="link-secondary text-decoration-none text-info">Create new
+                                        account</a>
+                                    <a href="#" class="link-secondary text-decoration-none text-info">Forgot password</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
-        <input id="password" name="pass" type="password" autocomplete="current-password" required
-               class="form-control">
     </div>
 
-    <div class="mb-3">
-        <button type="submit"
-                class="btn btn-success d-block mx-auto">
-            Log in
-        </button>
-    </div>
-    </div>
+
+
+
+
 </form>
 {{error_message}}
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 
 {% endblock %}
 {% block footer %}
-<div class="container-fluid pt-4 px-4">
+<div class="container-fluid pt-4  px-4">
     <div class="bg-secondary rounded-top p-4">
         <div class="row">
             <div class="col-12 col-sm-6 text-center text-sm-start">

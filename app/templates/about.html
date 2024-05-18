@@ -1,0 +1,140 @@
+{% extends 'components/base.html' %}
+
+{% block sidebar %}
+{% endblock %}
+{% block navbar %}
+{% endblock %}
+{% block content %}
+<style>
+    .info-section {
+        margin-bottom: 40px;
+    }
+    .info-section h2 {
+        margin-bottom: 20px;
+    }
+    .info-section img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .info-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .info-section ul li {
+        padding-left: 1.5em;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .info-section ul li::before {
+        content: "\f058";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: #17a2b8;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Stock Market and Cryptocurrency Information</h1>
+
+    <section class="info-section">
+        <h2>Understanding the Stock Market</h2>
+        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stock Market">
+        <p>The stock market is a platform where investors buy and sell shares of publicly traded companies. It plays a crucial role in the economy by enabling companies to raise capital and investors to own a stake in those companies. Stock prices fluctuate based on supply and demand, influenced by various factors such as company performance, economic indicators, and market sentiment.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Risks Involved <i class="fas fa-exclamation-triangle"></i></h2>
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Risk">
+        <p>Investing in the stock market involves several risks, including:</p>
+        <ul>
+            <li>Market Risk: The risk of losing investment due to market fluctuations.</li>
+            <li>Economic Risk: Economic downturns can negatively impact stock prices.</li>
+            <li>Company Risk: Poor performance or management issues in a company can lead to stock price decline.</li>
+            <li>Liquidity Risk: Difficulty in selling stocks without affecting their price.</li>
+            <li>Volatility Risk: Significant price swings can occur in the short term.</li>
+        </ul>
+    </section>
+
+    <section class="info-section">
+        <h2>Buying Stocks <i class="fas fa-chart-line"></i></h2>
+        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Buying Stocks">
+        <p>When buying stocks, consider the following tips:</p>
+        <ul>
+            <li>Research: Study the company's financial health, industry position, and growth potential.</li>
+            <li>Diversification: Spread your investments across different sectors to reduce risk.</li>
+            <li>Long-Term Perspective: Aim for long-term growth rather than short-term gains.</li>
+            <li>Use Limit Orders: Set a maximum price you are willing to pay to avoid overpaying.</li>
+        </ul>
+    </section>
+
+    <section class="info-section">
+        <h2>Selling Stocks <i class="fas fa-dollar-sign"></i></h2>
+        <img src="https://images.unsplash.com/photo-1423666523292-b458da343f6a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Selling Stocks">
+        <p>When selling stocks, keep the following in mind:</p>
+        <ul>
+            <li>Set Goals: Define your investment goals and sell when those goals are met.</li>
+            <li>Avoid Panic Selling: Don’t sell in a panic during market downturns; assess the situation calmly.</li>
+            <li>Review Performance: Regularly review your portfolio and sell underperforming stocks.</li>
+            <li>Consider Tax Implications: Be aware of capital gains tax and plan your sales accordingly.</li>
+        </ul>
+    </section>
+
+    <section class="info-section">
+        <h2>Introduction to Cryptocurrency <i class="fas fa-coins"></i></h2>
+        <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cryptocurrency">
+        <p>Cryptocurrency is a digital or virtual currency that uses cryptography for security. It operates independently of a central authority, making it decentralized. Bitcoin, Ethereum, and Ripple are some of the well-known cryptocurrencies. Cryptocurrencies can be traded on various online platforms and offer an alternative investment opportunity.</p>
+    </section>
+
+    <section class="info-section">
+        <h2>Risks in Cryptocurrency <i class="fas fa-exclamation-circle"></i></h2>
+        <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cryptocurrency Risks">
+        <p>Investing in cryptocurrency comes with unique risks, including:</p>
+        <ul>
+            <li>High Volatility: Cryptocurrency prices can be highly volatile, leading to significant gains or losses.</li>
+            <li>Regulatory Risk: Changes in regulations can impact the value and legality of cryptocurrencies.</li>
+            <li>Security Risk: Cryptocurrencies are susceptible to hacking and other security breaches.</li>
+            <li>Lack of Consumer Protections: Limited recourse for investors if something goes wrong.</li>
+            <li>Market Manipulation: The cryptocurrency market can be subject to manipulation by large investors.</li>
+        </ul>
+    </section>
+
+    <section class="info-section">
+        <h2>Tips for Investing in Cryptocurrency <i class="fas fa-lightbulb"></i></h2>
+        <img src="https://images.unsplash.com/photo-1640826514546-7d2eab70a4e5?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Investing in Cryptocurrency">
+        <p>When investing in cryptocurrency, consider these tips:</p>
+        <ul>
+            <li>Educate Yourself: Understand the technology and the market before investing.</li>
+            <li>Diversify: Invest in a variety of cryptocurrencies to spread risk.</li>
+            <li>Stay Informed: Keep up with news and trends in the cryptocurrency space.</li>
+            <li>Secure Your Investments: Use reputable exchanges and wallets, and enable two-factor authentication.</li>
+            <li>Invest Only What You Can Afford to Lose: Given the high risk, only invest money you can afford to lose.</li>
+        </ul>
+    </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {{error_message}}
+
+
+    {% endblock %}
+    {% block footer %}
+    <div class="container-fluid pt-4  px-4">
+        <div class="bg-secondary rounded-top p-4">
+            <div class="row">
+                <div class="col-12 col-sm-6 text-center text-sm-start">
+                    Developed by:<a href="https://github.com/tusharpatil1907/">Tushar patil</a>
+                </div>
+                <div class="col-12 col-sm-6 text-center text-sm-end">
+                    Designed By <a href="https://rushikeshthakur.netlify.app">Rushikesh Thakur</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

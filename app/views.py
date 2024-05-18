@@ -762,9 +762,14 @@ def login(request):
         return render(request, 'registration/login.html', {'error_message': 'Invalid login'})
     return render(request,'registration/login.html')
 
+<<<<<<< HEAD
 
 
 
 #predict cryptocurrency
 
 
+=======
+def about(request):
+    return render(request, 'about.html')
+>>>>>>> eebb69eae0c707218f476df51f67ff2390300ee8
