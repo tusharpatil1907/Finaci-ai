@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('predict/<str:ticker_value>/<str:number_of_days>/', predict),
+    path('predict/crypto/<str:ticker_value>/<str:number_of_days>/', predict_cryp),
     path('ticker/', ticker),
     # new added...
     path('ticker/crypto/', crypto_ticker),

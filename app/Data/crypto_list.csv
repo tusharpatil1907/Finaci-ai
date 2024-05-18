@@ -1,801 +1,801 @@
 ﻿number,Name,Symbol
-1,Bitcoin,BTC-USD
-2,Ethereum,ETH-USD
-3,Tether USDt,USDT-USD
-4,BNB,BNB-USD
-5,Solana,SOL-USD
-6,XRP,XRP-USD
-7,USDC,USDC-USD
-8,Dogecoin,DOGE-USD
-9,Toncoin,TON-USD
-10,Cardano,ADA-USD
-11,Avalanche,AVAX-USD
-12,Shiba Inu,SHIB-USD
-13,Bitcoin Cash,BCH-USD
-14,Polkadot,DOT-USD
-15,TRON,TRX-USD
-16,Chainlink,LINK-USD
-17,Polygon,MATIC-USD
-18,NEAR Protocol,NEAR-USD
-19,Internet Computer,ICP-USD
-20,Litecoin,LTC-USD
-21,Uniswap,UNI-USD
-22,UNUS SED LEO,LEO-USD
-23,Dai,DAI-USD
-24,Ethereum Classic,ETC-USD
-25,Aptos,APT-USD
-26,Filecoin,FIL-USD
-27,Stacks,STX-USD
-28,Bittensor,TAO-USD
-29,Mantle,MNT-USD
-30,Cosmos,ATOM-USD
-31,Cronos,CRO-USD
-32,Arbitrum,ARB-USD
-33,Stellar,XLM-USD
-34,Immutable,IMX-USD
-35,dogwifhat,WIF-USD
-36,Hedera,HBAR-USD
-37,Render,RNDR-USD
-38,VeChain,VET-USD
-39,OKB,OKB-USD
-40,First Digital USD,FDUSD-USD
-41,Kaspa,KAS-USD
-42,Maker,MKR-USD
-43,Injective,INJ-USD
-44,The Graph,GRT-USD
-45,Optimism,OP-USD
-46,Pepe,PEPE-USD
-47,Theta Network,THETA-USD
-48,Fantom,FTM-USD
-49,Monero,XMR-USD
-50,THORChain,RUNE-USD
-51,Lido DAO,LDO-USD
-52,Fetch.ai,FET-USD
-53,Ethena,ENA-USD
-54,Arweave,AR-USD
-55,Celestia,TIA-USD
-56,Core,CORE-USD
-57,Sui,SUI-USD
-58,FLOKI,FLOKI-USD
-59,Algorand,ALGO-USD
-60,Bitcoin SV,BSV-USD
-61,Gala,GALA-USD
-62,Bitget Token,BGB-USD
-63,Jupiter,JUP-USD
-64,Flow,FLOW-USD
-65,Aave,AAVE-USD
-66,Sei,SEI-USD
-67,Pendle,PENDLE-USD
-68,Beam,BEAM-USD
-69,Neo,NEO-USD
-70,ORDI,ORDI-USD
-71,Wormhole,W-USD
-72,BitTorrent (New),BTT-USD
-73,Bonk,BONK-USD
-74,Flare,FLR-USD
-75,MultiversX,EGLD-USD
-76,Quant,QNT-USD
-77,dYdX (Native),DYDX-USD
-78,The Sandbox,SAND-USD
-79,eCash,XEC-USD
-80,Axie Infinity,AXS-USD
-81,Nervos Network,CKB-USD
-82,Starknet,STRK-USD
-83,SingularityNET,AGIX-USD
-84,Conflux,CFX-USD
-85,Chiliz,CHZ-USD
-86,Synthetix,SNX-USD
-87,Tezos,XTZ-USD
-88,EOS,EOS-USD
-89,JasmyCoin,JASMY-USD
-90,Worldcoin,WLD-USD
-91,Pyth Network,PYTH-USD
-92,Decentraland,MANA-USD
-93,Ronin,RON-USD
-94,Mina,MINA-USD
-95,Ondo,ONDO-USD
-96,SATS,1000SATS-USD
-97,Kava,KAVA-USD
-98,ApeCoin,APE-USD
-99,KuCoin Token,KCS-USD
-100,Helium,HNT-USD
-101,IOTA,IOTA-USD
-102,Gnosis,GNO-USD
-103,Akash Network,AKT-USD
-104,PancakeSwap,CAKE-USD
-105,Ribbon Finance,RBN-USD
-106,Klaytn,KLAY-USD
-107,Axelar,AXL-USD
-108,AIOZ Network,AIOZ-USD
-109,dYdX (ethDYDX),ETHDYDX-USD
-110,Oasis Network,ROSE-USD
-111,Osmosis,OSMO-USD
-112,Nexo,NEXO-USD
-113,Bitcoin Gold,BTG-USD
-114,Blur,BLUR-USD
-115,Echelon Prime,PRIME-USD
-116,GateToken,GT-USD
-117,WOO,WOO-USD
-118,Terra Classic,LUNC-USD
-119,Theta Fuel,TFUEL-USD
-120,Astar,ASTR-USD
-121,Radix,XRD-USD
-122,Curve DAO Token,CRV-USD
-123,WEMIX,WEMIX-USD
-124,USDD,USDD-USD
-125,IoTeX,IOTX-USD
-126,MANTRA,OM-USD
-127,BOOK OF MEME,BOME-USD
-128,Dymension,DYM-USD
-129,Manta Network,MANTA-USD
-130,1inch Network,1INCH-USD
-131,ether.fi,ETHFI-USD
-132,Ethereum Name Service,ENS-USD
-133,Enjin Coin,ENJ-USD
-134,SKALE,SKL-USD
-135,Ocean Protocol,OCEAN-USD
-136,Altlayer,ALT-USD
-137,Terra,LUNA-USD
-138,XDC Network,XDC-USD
-139,Ankr,ANKR-USD
-140,Zilliqa,ZIL-USD
-141,Compound,COMP-USD
-142,DeXe,DEXE-USD
-143,Tether Gold,XAUt-USD
-144,EthereumPoW,ETHW-USD
-145,Ravencoin,RVN-USD
-146,Celo,CELO-USD
-147,GMT,GMT-USD
-148,MX TOKEN,MX-USD
-149,Qtum,QTUM-USD
-150,Rocket Pool,RPL-USD
-151,0x Protocol,ZRX-USD
-152,Pixels,PIXEL-USD
-153,Siacoin,SC-USD
-154,Biconomy,BICO-USD
-155,FTX Token,FTT-USD
-156,SuperVerse,SUPER-USD
-157,Frax Share,FXS-USD
-158,Holo,HOT-USD
-159,Trust Wallet Token,TWT-USD
-160,APENFT,NFT-USD
-161,Golem,GLM-USD
-162,Raydium,RAY-USD
-163,Saga,SAGA-USD
-164,ssv.network,SSV-USD
-165,Livepeer,LPT-USD
-166,Galxe,GAL-USD
-167,TrueUSD,TUSD-USD
-168,Basic Attention Token,BAT-USD
-169,Memecoin,MEME-USD
-170,Illuvium,ILV-USD
-171,Loopring,LRC-USD
-172,Metis,METIS-USD
-173,Gas,GAS-USD
-174,OriginTrail,TRAC-USD
-175,Mask Network,MASK-USD
-176,aelf,ELF-USD
-177,SPACE ID,ID-USD
-178,Reserve Rights,RSR-USD
-179,Threshold,T-USD
-180,Jito,JTO-USD
-181,Zcash,ZEC-USD
-182,NEM,XEM-USD
-183,Dash,DASH-USD
-184,ZetaChain,ZETA-USD
-185,Casper,CSPR-USD
-186,PAX Gold,PAXG-USD
-187,Polymesh,POLYX-USD
-188,Arkham,ARKM-USD
-189,Centrifuge,CFG-USD
-190,Aragon,ANT-USD
-191,SafePal,SFP-USD
-192,Yield Guild Games,YGG-USD
-193,cat in a dogs world,MEW-USD
-194,Decred,DCR-USD
-195,Chia,XCH-USD
-196,Amp,AMP-USD
-197,Harmony,ONE-USD
-198,JUST,JST-USD
-199,Flux,FLUX-USD
-200,Moonbeam,GLMR-USD
-201,Lido Staked ETH,stETH-USD
-202,Wrapped Bitcoin,WBTC-USD
-203,Wrapped TRON,WTRX-USD
-204,Bitcoin BEP2,BTCB-USD
-205,Wrapped HBAR,WHBAR-USD
-206,Wrapped Beacon ETH,WBETH-USD
-207,Wrapped eETH,weETH-USD
-208,Ethena USDe,USDe-USD
-209,Rocket Pool ETH,RETH-USD
-210,Zebec Network,ZBCN-USD
-211,Zeebu,ZBU-USD
-212,Venus BNB,vBNB-USD
-213,Marinade Staked SOL,MSOL-USD
-214,Wrapped BNB,WBNB-USD
-215,Cheelee,CHEEL-USD
-216,Coinbase Wrapped Staked ETH,cbETH-USD
-217,Frax,FRAX-USD
-218,Brett,BRETT-USD
-219,Degen,DEGEN-USD
-220,Fasttoken,FTN-USD
-221,Orbler,ORBR-USD
-222,Wrapped Kava,WKAVA-USD
-223,PAAL AI,PAAL-USD
-224,Rollbit Coin,RLB-USD
-225,Pocket Network,POKT-USD
-226,PUPS (Ordinals),PUPS-USD
-227,Waves,WAVES-USD
-228,SushiSwap,SUSHI-USD
-229,Telcoin,TEL-USD
-230,GMX,GMX-USD
-231,Convex Finance,CVX-USD
-232,Kusama,KSM-USD
-233,Kadena,KDA-USD
-234,Ontology,ONT-USD
-235,Chromia,CHR-USD
-236,Audius,AUDIO-USD
-237,HEX,HEX-USD
-238,Propy,PRO-USD
-239,ATOR Protocol,ATOR-USD
-240,ICON,ICX-USD
-241,VeThor Token,VTHO-USD
-242,0x0.ai,0x0-USD
-243,Band Protocol,BAND-USD
-244,WAX,WAXP-USD
-245,Coin98,C98-USD
-246,Neutron,NTRN-USD
-247,Xai,XAI-USD
-248,Baby Doge Coin,BabyDoge-USD
-249,Storj,STORJ-USD
-250,Venus BTC,vBTC-USD
-251,UMA,UMA-USD
-252,JOE,JOE-USD
-253,Aevo,AEVO-USD
-254,yearn.finance,YFI-USD
-255,Balancer,BAL-USD
-256,Treasure,MAGIC-USD
-257,API3,API3-USD
-258,Wilder World,WILD-USD
-259,Solar,SXP-USD
-260,DigiByte,DGB-USD
-261,Decentralized Social,DESO-USD
-262,LCX,LCX-USD
-263,Kujira,KUJI-USD
-264,Prom,PROM-USD
-265,Creditcoin,CTC-USD
-266,Huobi BTC,HBTC-USD
-267,Celer Network,CELR-USD
-268,Vanar Chain,VANRY-USD
-269,IOST,IOST-USD
-270,Arcblock,ABT-USD
-271,Toshi,TOSHI-USD
-272,FINSCHIA,FNSA-USD
-273,CyberConnect,CYBER-USD
-274,Marlin,POND-USD
-275,MAGA,TRUMP-USD
-276,Rootstock Infrastructure Framework,RIF-USD
-277,Stride,STRD-USD
-278,Beldex,BDX-USD
-279,Alchemy Pay,ACH-USD
-280,GuildFi,GF-USD
-281,Alephium,ALPH-USD
-282,Aleph Zero,AZERO-USD
-283,ALEX Lab,ALEX-USD
-284,SwissBorg,BORG-USD
-285,COTI,COTI-USD
-286,iExec RLC,RLC-USD
-287,Synapse,SYN-USD
-288,Open Campus,EDU-USD
-289,Lisk,LSK-USD
-290,Helium Mobile,MOBILE-USD
-291,Coq Inu,COQ-USD
-292,Big Time,BIGTIME-USD
-293,Pundi X (New),PUNDIX-USD
-294,Venus,XVS-USD
-295,BinaryX,BNX-USD
-296,Seedify.fund,SFUND-USD
-297,DAO Maker,DAO-USD
-298,TerraClassicUSD,USTC-USD
-299,Portal,PORTAL-USD
-300,Tellor,TRB-USD
-301,RSS3,RSS3-USD
-302,Smooth Love Potion,SLP-USD
-303,Delysium,AGI-USD
-304,MOG Coin,MOG-USD
-305,L7,LSD-USD
-306,Stratis [New],STRAX-USD
-307,VVS Finance,VVS-USD
-308,Cartesi,CTSI-USD
-309,Myro,MYRO-USD
-310,Syscoin,SYS-USD
-311,Numeraire,NMR-USD
-312,Wen,WEN-USD
-313,Keep Network,KEEP-USD
-314,IQ,IQ-USD
-315,Sleepless AI,AI-USD
-316,Hive,HIVE-USD
-317,BORA,BORA-USD
-318,Unizen,ZCX-USD
-319,Rootstock Smart Bitcoin,RBTC-USD
-320,Braintrust,BTRST-USD
-321,Powerledger,POWR-USD
-322,Civic,CVC-USD
-323,Bluzelle,BLZ-USD
-324,Dusk,DUSK-USD
-325,PayPal USD,PYUSD-USD
-326,USDB,USDB-USD
-327,Dent,DENT-USD
-328,Tensor,TNSR-USD
-329,Fusionist,ACE-USD
-330,Nano,XNO-USD
-331,SLERF,SLERF-USD
-332,Status,SNT-USD
-333,ApeX Protocol,APEX-USD
-334,Node AI,GPU-USD
-335,ConstitutionDAO,PEOPLE-USD
-336,Vulcan Forged (PYR),PYR-USD
-337,World Mobile Token,WMT-USD
-338,Hooked Protocol,HOOK-USD
-339,Covalent,CQT-USD
-340,MetFi,METFI-USD
-341,Oraichain,ORAI-USD
-342,Tribe,TRIBE-USD
-343,Phala Network,PHA-USD
-344,Multibit,MUBI-USD
-345,Ark,ARK-USD
-346,Horizen,ZEN-USD
-347,USDJ,USDJ-USD
-348,FLEX,FLEX-USD
-349,Ontology Gas,ONG-USD
-350,Oasys,OAS-USD
-351,Dione Protocol,DIONE-USD
-352,inSure DeFi,SURE-USD
-353,NFPrompt,NFP-USD
-354,AllianceBlock Nexera,NXRA-USD
-355,Request,REQ-USD
-356,MVL,MVL-USD
-357,Nakamoto Games,NAKA-USD
-358,Bone ShibaSwap,BONE-USD
-359,LooksRare,LOOKS-USD
-360,SmarDex,SDEX-USD
-361,Moonriver,MOVR-USD
-362,Hashflow,HFT-USD
-363,NYM,NYM-USD
-364,MimbleWimbleCoin,MWC-USD
-365,Secret,SCRT-USD
-366,Syntropy,NOIA-USD
-367,Hivemapper,HONEY-USD
-368,Stella,ALPHA-USD
-369,Symbol,XYM-USD
-370,Verge,XVG-USD
-371,Sun (New),SUN-USD
-372,Stargate Finance,STG-USD
-373,Steem,STEEM-USD
-374,Maverick Protocol,MAV-USD
-375,WINkLink,WIN-USD
-376,TrueFi,TRU-USD
-377,Highstreet,HIGH-USD
-378,Radiant Capital,RDNT-USD
-379,Bounce Token,AUCTION-USD
-380,Metars Genesis,MRS-USD
-381,Acala Token,ACA-USD
-382,Heroes of Mavia,MAVIA-USD
-383,Milady Meme Coin,LADYS-USD
-384,Sovryn,SOV-USD
-385,Venus ETH,vETH-USD
-386,Orca,ORCA-USD
-387,Myria,MYRIA-USD
-388,DODO,DODO-USD
-389,Liquity,LQTY-USD
-390,dKargo,DKA-USD
-391,Metal DAO,MTL-USD
-392,Aurora,AURORA-USD
-393,Kyber Network Crystal v2,KNC-USD
-394,Zignaly,ZIG-USD
-395,Dogelon Mars,ELON-USD
-396,Gains Network,GNS-USD
-397,Pax Dollar,USDP-USD
-398,crvUSD,CRVUSD-USD
-399,NKN,NKN-USD
-400,TokenFi,TOKEN-USD
-401,ChainGPT,CGPT-USD
-402,Orchid,OXT-USD
-403,Aavegotchi,GHST-USD
-404,Orbs,ORBS-USD
-405,MiL.k,MLK-USD
-406,XYO,XYO-USD
-407,OMG Network,OMG-USD
-408,Hifi Finance,HIFI-USD
-409,MAP Protocol,MAPO-USD
-410,Ethernity,ERN-USD
-411,MediBloc,MED-USD
-412,Gomining,GMT-USD
-413,STP,STPT-USD
-414,STASIS EURO,EURS-USD
-415,Radworks,RAD-USD
-416,LUKSO,LYX-USD
-417,Crown by Third Time Games,CROWN-USD
-418,Spell Token,SPELL-USD
-419,CUDOS,CUDOS-USD
-420,MARBLEX,MBX-USD
-421,Ergo,ERG-USD
-422,Mines of Dalarnia,DAR-USD
-423,Automata Network,ATA-USD
-424,Loom Network,LOOM-USD
-425,RARI,RARI-USD
-426,Ardor,ARDR-USD
-427,Origin Protocol,OGN-USD
-428,MyNeighborAlice,ALICE-USD
-429,Blockchain Foundation for Innovation & Collaboration,BFIC-USD
-430,Electroneum,ETN-USD
-431,Tokamak Network,TON-USD
-432,Bifrost,BFC-USD
-433,Tectum,TET-USD
-434,ARPA,ARPA-USD
-435,Shentu,CTK-USD
-436,Ankr Staked ETH,ankrETH-USD
-437,SuperRare,RARE-USD
-438,Polygon Ecosystem Token,POL-USD
-439,Gemini Dollar,GUSD-USD
-440,Art de Finance,ADF-USD
-441,Telos,TLOS-USD
-442,MOBOX,MBOX-USD
-443,Banana Gun,BANANA-USD
-444,Gitcoin,GTC-USD
-445,Huobi Token,HT-USD
-446,Goldfinch,GFI-USD
-447,GamerCoin,GHX-USD
-448,Solidus Ai Tech,AITECH-USD
-449,RACA,RACA-USD
-450,Liquity USD,LUSD-USD
-451,XPLA,XPLA-USD
-452,Badger DAO,BADGER-USD
-453,Bella Protocol,BEL-USD
-454,Bancor,BNT-USD
-455,WazirX,WRX-USD
-456,Venus USDC,vUSDC-USD
-457,Star Atlas,ATLAS-USD
-458,Pangolin,PNG-USD
-459,Trias Token (New),TRIAS-USD
-460,Access Protocol,ACS-USD
-461,StormX,STMX-USD
-462,BakeryToken,BAKE-USD
-463,Adventure Gold,AGLD-USD
-464,LTO Network,LTO-USD
-465,Chainge,XCHNG-USD
-466,Phoenix,PHB-USD
-467,BENQI,QI-USD
-468,Guild of Guardians,GOG-USD
-469,Polkastarter,POLS-USD
-470,GameFi.org,GAFI-USD
-471,ArbDoge AI,AIDOGE-USD
-472,PepeFork,PORK-USD
-473,Perpetual Protocol,PERP-USD
-474,Toko Token,TKO-USD
-475,LeverFi,LEVER-USD
-476,Agoras: Currency of Tau,AGRS-USD
-477,REI Network,REI-USD
-478,Frontier,FRONT-USD
-479,Tokenlon Network Token,LON-USD
-480,BitMart Token,BMX-USD
-481,Bazaars,BZR-USD
-482,MovieBloc,MBL-USD
-483,Hippocrat,HPO-USD
-484,Elastos,ELA-USD
-485,SIDUS,SIDUS-USD
-486,Maple,MPL-USD
-487,USDX [Kava],USDX-USD
-488,Clearpool,CPOOL-USD
-489,Ozone Chain,OZO-USD
-490,H2O DAO,H2O-USD
-491,Alien Worlds,TLM-USD
-492,QuarkChain,QKC-USD
-493,Smog,SMOG-USD
-494,VAIOT,VAI-USD
-495,Dimitra,DMTR-USD
-496,PlatON,LAT-USD
-497,Ren,REN-USD
-498,Star Atlas DAO,POLIS-USD
-499,Pandora,PANDORA-USD
-500,Wrapped NXM,WNXM-USD
-501,Viction,VIC-USD
-502,Ampleforth Governance Token,FORTH-USD
-503,HarryPotterObamaSonic10Inu (ERC-20),BITCOIN-USD
-504,Metadium,META-USD
-505,Velo,VELO-USD
-506,NULS,NULS-USD
-507,Rally,RLY-USD
-508,Boba Network,BOBA-USD
-509,Cortex,CTXC-USD
-510,Metaplex,MPLX-USD
-511,DeFinder Capital,DFC-USD
-512,VerusCoin,VRSC-USD
-513,Aergo,AERGO-USD
-514,Flamingo,FLM-USD
-515,tomiNet,TOMI-USD
-516,CLV,CLV-USD
-517,Neon EVM,NEON-USD
-518,Gods Unchained,GODS-USD
-519,Zero1 Labs,DEAI-USD
-520,Boson Protocol,BOSON-USD
-521,LimeWire,LMWR-USD
-522,Polytrade,TRADE-USD
-523,Cobak Token,CBK-USD
-524,NEOPIN,NPT-USD
-525,Ultra,UOS-USD
-526,Snek,SNEK-USD
-527,trac (Ordinals),TRAC-USD
-528,Nibiru Chain,NIBI-USD
-529,Function X,FX-USD
-530,StrikeX,STRX-USD
-531,Sweat Economy,SWEAT-USD
-532,Streamr,DATA-USD
-533,Forta,FORT-USD
-534,Gaimin,GMRX-USD
-535,Alchemix,ALCX-USD
-536,Linear Finance,LINA-USD
-537,Orion,ORN-USD
-538,Numbers Protocol,NUM-USD
-539,Bitgert,BRISE-USD
-540,FUNToken,FUN-USD
-541,Cream Finance,CREAM-USD
-542,Victoria VR,VR-USD
-543,DEXTools,DEXT-USD
-544,PlayDapp,PDA-USD
-545,DIMO,DIMO-USD
-546,MEMETOON,MEME-USD
-547,Wirex Token,WXT-USD
-548,Beta Finance,BETA-USD
-549,Artificial Liquid Intelligence,ALI-USD
-550,Carry,CRE-USD
-551,Moon Tropica,CAH-USD
-552,district0x,DNT-USD
-553,Energy Web Token,EWT-USD
-554,Verasity,VRA-USD
-555,KWD,KWD-USD
-556,Wanchain,WAN-USD
-557,Reef,REEF-USD
-558,Ultima,ULTIMA-USD
-559,Measurable Data Token,MDT-USD
-560,Lyra,LYRA-USD
-561,Uquid Coin,UQC-USD
-562,Mdex,MDX-USD
-563,PaLM AI,PALM-USD
-564,IDEX,IDEX-USD
-565,Contentos,COS-USD
-566,DIA,DIA-USD
-567,Alitas,ALT-USD
-568,IAGON,IAG-USD
-569,Enzyme,MLN-USD
-570,BUSD,BUSD-USD
-571,DeFi Pulse Index,DPI-USD
-572,Clash of Lilliput,COL-USD
-573,COMBO,COMBO-USD
-574,Staika,STIK-USD
-575,Onyxcoin,XCN-USD
-576,The Root Network,ROOT-USD
-577,Constellation,DAG-USD
-578,Polymath,POLY-USD
-579,Propbase,PROPS-USD
-580,Grok,GROK-USD
-581,Cornucopias,COPI-USD
-582,Opulous,OPUL-USD
-583,DeFiChain,DFI-USD
-584,Everscale,EVER-USD
-585,Veno Finance,VNO-USD
-586,Harvest Finance,FARM-USD
-587,Venus XVS,vXVS-USD
-588,Hunt Town,HUNT-USD
-589,SingularityDAO,SDAO-USD
-590,5ire,5IRE-USD
-591,Dego Finance,DEGO-USD
-592,Artrade,ATR-USD
-593,Propchain,PROPC-USD
-594,Games for a Living,GFAL-USD
-595,Komodo,KMD-USD
-596,Meter Governance,MTRG-USD
-597,Bitcoin Palladium,BTCP-USD
-598,Strike,STRK-USD
-599,xMoney,UTK-USD
-600,ThunderCore,TT-USD
-601,IRISnet,IRIS-USD
-602,Anchored Coins AEUR,AEUR-USD
-603,Dynex,DNX-USD
-604,League of Kingdoms Arena,LOKA-USD
-605,Venus BUSD,vBUSD-USD
-606,Botto,BOTTO-USD
-607,Statter Network,STT-USD
-608,Steem Dollars,SBD-USD
-609,CEEK VR,CEEK-USD
-610,MATH,MATH-USD
-611,Dora Factory,DORA-USD
-612,Aleph.im,ALEPH-USD
-613,Dero,DERO-USD
-614,Astrafer,ASTRAFER-USD
-615,RAMP,RAMP-USD
-616,FirmaChain,FCT-USD
-617,Pirate Chain,ARRR-USD
-618,Shrapnel,SHRAP-USD
-619,Kin,KIN-USD
-620,ArchLoot,ALT-USD
-621,PLANET,PLANET-USD
-622,Persistence One,XPRT-USD
-623,Niza Global,NIZA-USD
-624,Clore.ai,CLORE-USD
-625,Litentry,LIT-USD
-626,Bonfida,FIDA-USD
-627,Voxies,VOXEL-USD
-628,PAID Network,PAID-USD
-629,Groestlcoin,GRS-USD
-630,RichQUACK.com,QUACK-USD
-631,DEAPcoin,DEP-USD
-632,Sologenic,SOLO-USD
-633,Gelato,GEL-USD
-634,Quickswap [New],QUICK-USD
-635,Kwenta,KWENTA-USD
-636,Cratos,CRTS-USD
-637,Sentinel Protocol,UPP-USD
-638,Vertex Protocol,VRTX-USD
-639,Kishu Inu,KISHU-USD
-640,Impossible Finance Launchpad,IDIA-USD
-641,Assemble Protocol,ASM-USD
-642,pSTAKE Finance,PSTAKE-USD
-643,Coreum,COREUM-USD
-644,Solend,SLND-USD
-645,SelfKey,KEY-USD
-646,Solchat,CHAT-USD
-647,APX,APX-USD
-648,Suku,SUKU-USD
-649,Circuits of Value,COVAL-USD
-650,Turbo,TURBO-USD
-651,Doge Killer,LEASH-USD
-652,Tenset,10SET-USD
-653,e-Radix,EXRD-USD
-654,Reserve,RSV-USD
-655,Neom,NEOM-USD
-656,cheqd,CHEQ-USD
-657,Smart Layer Network,SLN-USD
-658,Celsius,CEL-USD
-659,EURC,EURC-USD
-660,Morpheus.Network,MNW-USD
-661,Green Satoshi Token (SOL),GST-USD
-662,Cere Network,CERE-USD
-663,Concordium,CCD-USD
-664,Biswap,BSW-USD
-665,Moss Coin,MOC-USD
-666,HOPR,HOPR-USD
-667,Hacken Token,HAI-USD
-668,NFT Worlds,WRLD-USD
-669,Vega Protocol,VEGA-USD
-670,smARTOFGIVING,AOG-USD
-671,sUSD,SUSD-USD
-672,Router Protocol,ROUTE-USD
-673,Stratos,STOS-USD
-674,Only1,LIKE-USD
-675,ELYSIA,EL-USD
-676,Bitcoin Dominica,BTCD-USD
-677,XCAD Network,XCAD-USD
-678,Lumerin,LMR-USD
-679,Moonchain,MXC-USD
-680,PolySwarm,NCT-USD
-681,SLG.GAMES,SLG-USD
-682,Vara Network,VARA-USD
-683,StaFi,FIS-USD
-684,ASD,ASD-USD
-685,Vectorspace AI,VXV-USD
-686,Alpha Quark Token,AQT-USD
-687,KYVE Network,KYVE-USD
-688,Unifi Protocol DAO,UNFI-USD
-689,Graphlinq Chain,GLQ-USD
-690,ZKFair,ZKF-USD
-691,Whiteheart,WHITE-USD
-692,Shapeshift FOX Token,FOX-USD
-693,Stronghold Token,SHX-USD
-694,MUX Protocol,MCB-USD
-695,iMe Lab,LIME-USD
-696,Farcana,FAR-USD
-697,AVA,AVA-USD
-698,Cetus Protocol,CETUS-USD
-699,Metacraft,MCT-USD
-700,ZTX,ZTX-USD
-701,ALTAVA,TAVA-USD
-702,Isiklar Coin,ISIKC-USD
-703,Altura,ALU-USD
-704,Decubate,DCB-USD
-705,Syncus,SYNC-USD
-706,UniLend,UFT-USD
-707,Keep3rV1,KP3R-USD
-708,Zano,ZANO-USD
-709,AhaToken,AHT-USD
-710,Tranchess,CHESS-USD
-711,TNC Coin,TNC-USD
-712,RocketX exchange,RVF-USD
-713,QuickSwap [Old],QUICK-USD
-714,Taraxa,TARA-USD
-715,XPR Network,XPR-USD
-716,BurgerCities,BURGER-USD
-717,FC Barcelona Fan Token,BAR-USD
-718,Qredo,QRDO-USD
-719,ViciCoin,VCNT-USD
-720,PARSIQ,PRQ-USD
-721,AdEx,ADX-USD
-722,PIVX,PIVX-USD
-723,Aurory,AURY-USD
-724,Velas,VLX-USD
-725,AVINOC,AVINOC-USD
-726,Dejitaru Tsuka,TSUKA-USD
-727,Akropolis,AKRO-USD
-728,Tether EURt,EURt-USD
-729,Nuco.cloud,NCDT-USD
-730,Paris Saint-Germain Fan Token,PSG-USD
-731,WiFi Map,WIFI-USD
-732,Katana Inu,KATA-USD
-733,Nine Chronicles,WNCG-USD
-734,VIDT DAO,VIDT-USD
-735,AirDAO,AMB-USD
-736,Dock,DOCK-USD
-737,Celo Dollar,CUSD-USD
-738,Across Protocol,ACX-USD
-739,OctaSpace,OCTA-USD
-740,Decimal,DEL-USD
-741,CENNZnet,CENNZ-USD
-742,Mango,MNGO-USD
-743,Pitbull,PIT-USD
-744,Alpaca Finance,ALPACA-USD
-745,Blocksquare Token,BST-USD
-746,Scallop,SCLP-USD
-747,Minswap,MIN-USD
-748,Samoyedcoin,SAMO-USD
-749,Aura Finance,AURA-USD
-750,XSGD,XSGD-USD
-751,Carrieverse,CVTX-USD
-752,Swarm Markets,SMT-USD
-753,Synesis One,SNS-USD
-754,HELLO Labs,HELLO-USD
-755,Ampleforth,AMPL-USD
-756,Kryll,KRL-USD
-757,VITE,VITE-USD
-758,DeRace,DERC-USD
-759,BADMAD ROBOTS,METAL-USD
-760,AIT Protocol,AIT-USD
-761,FIO Protocol,FIO-USD
-762,Starlink,STARL-USD
-763,Creo Engine,CREO-USD
-764,OORT,OORT-USD
-765,Orange,ORNJ-USD
-766,Venus USDT,vUSDT-USD
-767,FONSmartChain,FON-USD
-768,Beefy,BIFI-USD
-769,Bloktopia,BLOK-USD
-770,Helium IOT,IOT-USD
-771,NuNet,NTX-USD
-772,Kava Lend,HARD-USD
-773,Sperax,SPA-USD
-774,Hatom,HTM-USD
-775,Wing Finance,WING-USD
-776,Crypto Asset Governance Alliance,CAGA-USD
-777,WAGMI Games,WAGMIGAMES-USD
-778,WeBuy,WE-USD
-779,Nodle,NODL-USD
-780,OmniFlix Network,FLIX-USD
-781,Tectonic,TONIC-USD
-782,Connex,CONX-USD
-783,BarnBridge,BOND-USD
-784,UFO Gaming,UFO-USD
-785,Sentinel,DVPN-USD
-786,Santos FC Fan Token,SANTOS-USD
-787,Student Coin,STC-USD
-788,Onomy Protocol,NOM-USD
-789,Inverse Finance,INV-USD
-790,Abelian,ABEL-USD
-791,S.S. Lazio Fan Token,LAZIO-USD
-792,RabbitX,RBX-USD
-793,Inspect,INSP-USD
-794,Cellframe,CELL-USD
-795,GameGPT,DUEL-USD
-796,Swarm,BZZ-USD
-797,TROY,TROY-USD
-798,GameSwift,GSWIFT-USD
-799,Klever,KLV-USD
-800,Shiba Predator,QOM-USD
+1,Bitcoin,BTC-INR
+2,Ethereum,ETH-INR
+3,Tether INRt,INRT-INR
+4,BNB,BNB-INR
+5,Solana,SOL-INR
+6,XRP,XRP-INR
+7,INRC,INRC-INR
+8,Dogecoin,DOGE-INR
+9,Toncoin,TON-INR
+10,Cardano,ADA-INR
+11,Avalanche,AVAX-INR
+12,Shiba Inu,SHIB-INR
+13,Bitcoin Cash,BCH-INR
+14,Polkadot,DOT-INR
+15,TRON,TRX-INR
+16,Chainlink,LINK-INR
+17,Polygon,MATIC-INR
+18,NEAR Protocol,NEAR-INR
+19,Internet Computer,ICP-INR
+20,Litecoin,LTC-INR
+21,Uniswap,UNI-INR
+22,UNUS SED LEO,LEO-INR
+23,Dai,DAI-INR
+24,Ethereum Classic,ETC-INR
+25,Aptos,APT-INR
+26,Filecoin,FIL-INR
+27,Stacks,STX-INR
+28,Bittensor,TAO-INR
+29,Mantle,MNT-INR
+30,Cosmos,ATOM-INR
+31,Cronos,CRO-INR
+32,Arbitrum,ARB-INR
+33,Stellar,XLM-INR
+34,Immutable,IMX-INR
+35,dogwifhat,WIF-INR
+36,Hedera,HBAR-INR
+37,Render,RNDR-INR
+38,VeChain,VET-INR
+39,OKB,OKB-INR
+40,First Digital INR,FDINR-INR
+41,Kaspa,KAS-INR
+42,Maker,MKR-INR
+43,Injective,INJ-INR
+44,The Graph,GRT-INR
+45,Optimism,OP-INR
+46,Pepe,PEPE-INR
+47,Theta Network,THETA-INR
+48,Fantom,FTM-INR
+49,Monero,XMR-INR
+50,THORChain,RUNE-INR
+51,Lido DAO,LDO-INR
+52,Fetch.ai,FET-INR
+53,Ethena,ENA-INR
+54,Arweave,AR-INR
+55,Celestia,TIA-INR
+56,Core,CORE-INR
+57,Sui,SUI-INR
+58,FLOKI,FLOKI-INR
+59,Algorand,ALGO-INR
+60,Bitcoin SV,BSV-INR
+61,Gala,GALA-INR
+62,Bitget Token,BGB-INR
+63,Jupiter,JUP-INR
+64,Flow,FLOW-INR
+65,Aave,AAVE-INR
+66,Sei,SEI-INR
+67,Pendle,PENDLE-INR
+68,Beam,BEAM-INR
+69,Neo,NEO-INR
+70,ORDI,ORDI-INR
+71,Wormhole,W-INR
+72,BitTorrent (New),BTT-INR
+73,Bonk,BONK-INR
+74,Flare,FLR-INR
+75,MultiversX,EGLD-INR
+76,Quant,QNT-INR
+77,dYdX (Native),DYDX-INR
+78,The Sandbox,SAND-INR
+79,eCash,XEC-INR
+80,Axie Infinity,AXS-INR
+81,Nervos Network,CKB-INR
+82,Starknet,STRK-INR
+83,SingularityNET,AGIX-INR
+84,Conflux,CFX-INR
+85,Chiliz,CHZ-INR
+86,Synthetix,SNX-INR
+87,Tezos,XTZ-INR
+88,EOS,EOS-INR
+89,JasmyCoin,JASMY-INR
+90,Worldcoin,WLD-INR
+91,Pyth Network,PYTH-INR
+92,Decentraland,MANA-INR
+93,Ronin,RON-INR
+94,Mina,MINA-INR
+95,Ondo,ONDO-INR
+96,SATS,1000SATS-INR
+97,Kava,KAVA-INR
+98,ApeCoin,APE-INR
+99,KuCoin Token,KCS-INR
+100,Helium,HNT-INR
+101,IOTA,IOTA-INR
+102,Gnosis,GNO-INR
+103,Akash Network,AKT-INR
+104,PancakeSwap,CAKE-INR
+105,Ribbon Finance,RBN-INR
+106,Klaytn,KLAY-INR
+107,Axelar,AXL-INR
+108,AIOZ Network,AIOZ-INR
+109,dYdX (ethDYDX),ETHDYDX-INR
+110,Oasis Network,ROSE-INR
+111,Osmosis,OSMO-INR
+112,Nexo,NEXO-INR
+113,Bitcoin Gold,BTG-INR
+114,Blur,BLUR-INR
+115,Echelon Prime,PRIME-INR
+116,GateToken,GT-INR
+117,WOO,WOO-INR
+118,Terra Classic,LUNC-INR
+119,Theta Fuel,TFUEL-INR
+120,Astar,ASTR-INR
+121,Radix,XRD-INR
+122,Curve DAO Token,CRV-INR
+123,WEMIX,WEMIX-INR
+124,INRD,INRD-INR
+125,IoTeX,IOTX-INR
+126,MANTRA,OM-INR
+127,BOOK OF MEME,BOME-INR
+128,Dymension,DYM-INR
+129,Manta Network,MANTA-INR
+130,1inch Network,1INCH-INR
+131,ether.fi,ETHFI-INR
+132,Ethereum Name Service,ENS-INR
+133,Enjin Coin,ENJ-INR
+134,SKALE,SKL-INR
+135,Ocean Protocol,OCEAN-INR
+136,Altlayer,ALT-INR
+137,Terra,LUNA-INR
+138,XDC Network,XDC-INR
+139,Ankr,ANKR-INR
+140,Zilliqa,ZIL-INR
+141,Compound,COMP-INR
+142,DeXe,DEXE-INR
+143,Tether Gold,XAUt-INR
+144,EthereumPoW,ETHW-INR
+145,Ravencoin,RVN-INR
+146,Celo,CELO-INR
+147,GMT,GMT-INR
+148,MX TOKEN,MX-INR
+149,Qtum,QTUM-INR
+150,Rocket Pool,RPL-INR
+151,0x Protocol,ZRX-INR
+152,Pixels,PIXEL-INR
+153,Siacoin,SC-INR
+154,Biconomy,BICO-INR
+155,FTX Token,FTT-INR
+156,SuperVerse,SUPER-INR
+157,Frax Share,FXS-INR
+158,Holo,HOT-INR
+159,Trust Wallet Token,TWT-INR
+160,APENFT,NFT-INR
+161,Golem,GLM-INR
+162,Raydium,RAY-INR
+163,Saga,SAGA-INR
+164,ssv.network,SSV-INR
+165,Livepeer,LPT-INR
+166,Galxe,GAL-INR
+167,TrueINR,TINR-INR
+168,Basic Attention Token,BAT-INR
+169,Memecoin,MEME-INR
+170,Illuvium,ILV-INR
+171,Loopring,LRC-INR
+172,Metis,METIS-INR
+173,Gas,GAS-INR
+174,OriginTrail,TRAC-INR
+175,Mask Network,MASK-INR
+176,aelf,ELF-INR
+177,SPACE ID,ID-INR
+178,Reserve Rights,RSR-INR
+179,Threshold,T-INR
+180,Jito,JTO-INR
+181,Zcash,ZEC-INR
+182,NEM,XEM-INR
+183,Dash,DASH-INR
+184,ZetaChain,ZETA-INR
+185,Casper,CSPR-INR
+186,PAX Gold,PAXG-INR
+187,Polymesh,POLYX-INR
+188,Arkham,ARKM-INR
+189,Centrifuge,CFG-INR
+190,Aragon,ANT-INR
+191,SafePal,SFP-INR
+192,Yield Guild Games,YGG-INR
+193,cat in a dogs world,MEW-INR
+194,Decred,DCR-INR
+195,Chia,XCH-INR
+196,Amp,AMP-INR
+197,Harmony,ONE-INR
+198,JUST,JST-INR
+199,Flux,FLUX-INR
+200,Moonbeam,GLMR-INR
+201,Lido Staked ETH,stETH-INR
+202,Wrapped Bitcoin,WBTC-INR
+203,Wrapped TRON,WTRX-INR
+204,Bitcoin BEP2,BTCB-INR
+205,Wrapped HBAR,WHBAR-INR
+206,Wrapped Beacon ETH,WBETH-INR
+207,Wrapped eETH,weETH-INR
+208,Ethena INRe,INRe-INR
+209,Rocket Pool ETH,RETH-INR
+210,Zebec Network,ZBCN-INR
+211,Zeebu,ZBU-INR
+212,Venus BNB,vBNB-INR
+213,Marinade Staked SOL,MSOL-INR
+214,Wrapped BNB,WBNB-INR
+215,Cheelee,CHEEL-INR
+216,Coinbase Wrapped Staked ETH,cbETH-INR
+217,Frax,FRAX-INR
+218,Brett,BRETT-INR
+219,Degen,DEGEN-INR
+220,Fasttoken,FTN-INR
+221,Orbler,ORBR-INR
+222,Wrapped Kava,WKAVA-INR
+223,PAAL AI,PAAL-INR
+224,Rollbit Coin,RLB-INR
+225,Pocket Network,POKT-INR
+226,PUPS (Ordinals),PUPS-INR
+227,Waves,WAVES-INR
+228,SushiSwap,SUSHI-INR
+229,Telcoin,TEL-INR
+230,GMX,GMX-INR
+231,Convex Finance,CVX-INR
+232,Kusama,KSM-INR
+233,Kadena,KDA-INR
+234,Ontology,ONT-INR
+235,Chromia,CHR-INR
+236,Audius,AUDIO-INR
+237,HEX,HEX-INR
+238,Propy,PRO-INR
+239,ATOR Protocol,ATOR-INR
+240,ICON,ICX-INR
+241,VeThor Token,VTHO-INR
+242,0x0.ai,0x0-INR
+243,Band Protocol,BAND-INR
+244,WAX,WAXP-INR
+245,Coin98,C98-INR
+246,Neutron,NTRN-INR
+247,Xai,XAI-INR
+248,Baby Doge Coin,BabyDoge-INR
+249,Storj,STORJ-INR
+250,Venus BTC,vBTC-INR
+251,UMA,UMA-INR
+252,JOE,JOE-INR
+253,Aevo,AEVO-INR
+254,yearn.finance,YFI-INR
+255,Balancer,BAL-INR
+256,Treasure,MAGIC-INR
+257,API3,API3-INR
+258,Wilder World,WILD-INR
+259,Solar,SXP-INR
+260,DigiByte,DGB-INR
+261,Decentralized Social,DESO-INR
+262,LCX,LCX-INR
+263,Kujira,KUJI-INR
+264,Prom,PROM-INR
+265,Creditcoin,CTC-INR
+266,Huobi BTC,HBTC-INR
+267,Celer Network,CELR-INR
+268,Vanar Chain,VANRY-INR
+269,IOST,IOST-INR
+270,Arcblock,ABT-INR
+271,Toshi,TOSHI-INR
+272,FINSCHIA,FNSA-INR
+273,CyberConnect,CYBER-INR
+274,Marlin,POND-INR
+275,MAGA,TRUMP-INR
+276,Rootstock Infrastructure Framework,RIF-INR
+277,Stride,STRD-INR
+278,Beldex,BDX-INR
+279,Alchemy Pay,ACH-INR
+280,GuildFi,GF-INR
+281,Alephium,ALPH-INR
+282,Aleph Zero,AZERO-INR
+283,ALEX Lab,ALEX-INR
+284,SwissBorg,BORG-INR
+285,COTI,COTI-INR
+286,iExec RLC,RLC-INR
+287,Synapse,SYN-INR
+288,Open Campus,EDU-INR
+289,Lisk,LSK-INR
+290,Helium Mobile,MOBILE-INR
+291,Coq Inu,COQ-INR
+292,Big Time,BIGTIME-INR
+293,Pundi X (New),PUNDIX-INR
+294,Venus,XVS-INR
+295,BinaryX,BNX-INR
+296,Seedify.fund,SFUND-INR
+297,DAO Maker,DAO-INR
+298,TerraClassicINR,USTC-INR
+299,Portal,PORTAL-INR
+300,Tellor,TRB-INR
+301,RSS3,RSS3-INR
+302,Smooth Love Potion,SLP-INR
+303,Delysium,AGI-INR
+304,MOG Coin,MOG-INR
+305,L7,LSD-INR
+306,Stratis [New],STRAX-INR
+307,VVS Finance,VVS-INR
+308,Cartesi,CTSI-INR
+309,Myro,MYRO-INR
+310,Syscoin,SYS-INR
+311,Numeraire,NMR-INR
+312,Wen,WEN-INR
+313,Keep Network,KEEP-INR
+314,IQ,IQ-INR
+315,Sleepless AI,AI-INR
+316,Hive,HIVE-INR
+317,BORA,BORA-INR
+318,Unizen,ZCX-INR
+319,Rootstock Smart Bitcoin,RBTC-INR
+320,Braintrust,BTRST-INR
+321,Powerledger,POWR-INR
+322,Civic,CVC-INR
+323,Bluzelle,BLZ-INR
+324,Dusk,DUSK-INR
+325,PayPal INR,PYINR-INR
+326,INRB,INRB-INR
+327,Dent,DENT-INR
+328,Tensor,TNSR-INR
+329,Fusionist,ACE-INR
+330,Nano,XNO-INR
+331,SLERF,SLERF-INR
+332,Status,SNT-INR
+333,ApeX Protocol,APEX-INR
+334,Node AI,GPU-INR
+335,ConstitutionDAO,PEOPLE-INR
+336,Vulcan Forged (PYR),PYR-INR
+337,World Mobile Token,WMT-INR
+338,Hooked Protocol,HOOK-INR
+339,Covalent,CQT-INR
+340,MetFi,METFI-INR
+341,Oraichain,ORAI-INR
+342,Tribe,TRIBE-INR
+343,Phala Network,PHA-INR
+344,Multibit,MUBI-INR
+345,Ark,ARK-INR
+346,Horizen,ZEN-INR
+347,INRJ,INRJ-INR
+348,FLEX,FLEX-INR
+349,Ontology Gas,ONG-INR
+350,Oasys,OAS-INR
+351,Dione Protocol,DIONE-INR
+352,inSure DeFi,SURE-INR
+353,NFPrompt,NFP-INR
+354,AllianceBlock Nexera,NXRA-INR
+355,Request,REQ-INR
+356,MVL,MVL-INR
+357,Nakamoto Games,NAKA-INR
+358,Bone ShibaSwap,BONE-INR
+359,LooksRare,LOOKS-INR
+360,SmarDex,SDEX-INR
+361,Moonriver,MOVR-INR
+362,Hashflow,HFT-INR
+363,NYM,NYM-INR
+364,MimbleWimbleCoin,MWC-INR
+365,Secret,SCRT-INR
+366,Syntropy,NOIA-INR
+367,Hivemapper,HONEY-INR
+368,Stella,ALPHA-INR
+369,Symbol,XYM-INR
+370,Verge,XVG-INR
+371,Sun (New),SUN-INR
+372,Stargate Finance,STG-INR
+373,Steem,STEEM-INR
+374,Maverick Protocol,MAV-INR
+375,WINkLink,WIN-INR
+376,TrueFi,TRU-INR
+377,Highstreet,HIGH-INR
+378,Radiant Capital,RDNT-INR
+379,Bounce Token,AUCTION-INR
+380,Metars Genesis,MRS-INR
+381,Acala Token,ACA-INR
+382,Heroes of Mavia,MAVIA-INR
+383,Milady Meme Coin,LADYS-INR
+384,Sovryn,SOV-INR
+385,Venus ETH,vETH-INR
+386,Orca,ORCA-INR
+387,Myria,MYRIA-INR
+388,DODO,DODO-INR
+389,Liquity,LQTY-INR
+390,dKargo,DKA-INR
+391,Metal DAO,MTL-INR
+392,Aurora,AURORA-INR
+393,Kyber Network Crystal v2,KNC-INR
+394,Zignaly,ZIG-INR
+395,Dogelon Mars,ELON-INR
+396,Gains Network,GNS-INR
+397,Pax Dollar,INRP-INR
+398,crvINR,CRVINR-INR
+399,NKN,NKN-INR
+400,TokenFi,TOKEN-INR
+401,ChainGPT,CGPT-INR
+402,Orchid,OXT-INR
+403,Aavegotchi,GHST-INR
+404,Orbs,ORBS-INR
+405,MiL.k,MLK-INR
+406,XYO,XYO-INR
+407,OMG Network,OMG-INR
+408,Hifi Finance,HIFI-INR
+409,MAP Protocol,MAPO-INR
+410,Ethernity,ERN-INR
+411,MediBloc,MED-INR
+412,Gomining,GMT-INR
+413,STP,STPT-INR
+414,STASIS EURO,EURS-INR
+415,Radworks,RAD-INR
+416,LUKSO,LYX-INR
+417,Crown by Third Time Games,CROWN-INR
+418,Spell Token,SPELL-INR
+419,CUDOS,CUDOS-INR
+420,MARBLEX,MBX-INR
+421,Ergo,ERG-INR
+422,Mines of Dalarnia,DAR-INR
+423,Automata Network,ATA-INR
+424,Loom Network,LOOM-INR
+425,RARI,RARI-INR
+426,Ardor,ARDR-INR
+427,Origin Protocol,OGN-INR
+428,MyNeighborAlice,ALICE-INR
+429,Blockchain Foundation for Innovation & Collaboration,BFIC-INR
+430,Electroneum,ETN-INR
+431,Tokamak Network,TON-INR
+432,Bifrost,BFC-INR
+433,Tectum,TET-INR
+434,ARPA,ARPA-INR
+435,Shentu,CTK-INR
+436,Ankr Staked ETH,ankrETH-INR
+437,SuperRare,RARE-INR
+438,Polygon Ecosystem Token,POL-INR
+439,Gemini Dollar,GINR-INR
+440,Art de Finance,ADF-INR
+441,Telos,TLOS-INR
+442,MOBOX,MBOX-INR
+443,Banana Gun,BANANA-INR
+444,Gitcoin,GTC-INR
+445,Huobi Token,HT-INR
+446,Goldfinch,GFI-INR
+447,GamerCoin,GHX-INR
+448,Solidus Ai Tech,AITECH-INR
+449,RACA,RACA-INR
+450,Liquity INR,LINR-INR
+451,XPLA,XPLA-INR
+452,Badger DAO,BADGER-INR
+453,Bella Protocol,BEL-INR
+454,Bancor,BNT-INR
+455,WazirX,WRX-INR
+456,Venus INRC,vINRC-INR
+457,Star Atlas,ATLAS-INR
+458,Pangolin,PNG-INR
+459,Trias Token (New),TRIAS-INR
+460,Access Protocol,ACS-INR
+461,StormX,STMX-INR
+462,BakeryToken,BAKE-INR
+463,Adventure Gold,AGLD-INR
+464,LTO Network,LTO-INR
+465,Chainge,XCHNG-INR
+466,Phoenix,PHB-INR
+467,BENQI,QI-INR
+468,Guild of Guardians,GOG-INR
+469,Polkastarter,POLS-INR
+470,GameFi.org,GAFI-INR
+471,ArbDoge AI,AIDOGE-INR
+472,PepeFork,PORK-INR
+473,Perpetual Protocol,PERP-INR
+474,Toko Token,TKO-INR
+475,LeverFi,LEVER-INR
+476,Agoras: Currency of Tau,AGRS-INR
+477,REI Network,REI-INR
+478,Frontier,FRONT-INR
+479,Tokenlon Network Token,LON-INR
+480,BitMart Token,BMX-INR
+481,Bazaars,BZR-INR
+482,MovieBloc,MBL-INR
+483,Hippocrat,HPO-INR
+484,Elastos,ELA-INR
+485,SIDUS,SIDUS-INR
+486,Maple,MPL-INR
+487,INRX [Kava],INRX-INR
+488,Clearpool,CPOOL-INR
+489,Ozone Chain,OZO-INR
+490,H2O DAO,H2O-INR
+491,Alien Worlds,TLM-INR
+492,QuarkChain,QKC-INR
+493,Smog,SMOG-INR
+494,VAIOT,VAI-INR
+495,Dimitra,DMTR-INR
+496,PlatON,LAT-INR
+497,Ren,REN-INR
+498,Star Atlas DAO,POLIS-INR
+499,Pandora,PANDORA-INR
+500,Wrapped NXM,WNXM-INR
+501,Viction,VIC-INR
+502,Ampleforth Governance Token,FORTH-INR
+503,HarryPotterObamaSonic10Inu (ERC-20),BITCOIN-INR
+504,Metadium,META-INR
+505,Velo,VELO-INR
+506,NULS,NULS-INR
+507,Rally,RLY-INR
+508,Boba Network,BOBA-INR
+509,Cortex,CTXC-INR
+510,Metaplex,MPLX-INR
+511,DeFinder Capital,DFC-INR
+512,VerusCoin,VRSC-INR
+513,Aergo,AERGO-INR
+514,Flamingo,FLM-INR
+515,tomiNet,TOMI-INR
+516,CLV,CLV-INR
+517,Neon EVM,NEON-INR
+518,Gods Unchained,GODS-INR
+519,Zero1 Labs,DEAI-INR
+520,Boson Protocol,BOSON-INR
+521,LimeWire,LMWR-INR
+522,Polytrade,TRADE-INR
+523,Cobak Token,CBK-INR
+524,NEOPIN,NPT-INR
+525,Ultra,UOS-INR
+526,Snek,SNEK-INR
+527,trac (Ordinals),TRAC-INR
+528,Nibiru Chain,NIBI-INR
+529,Function X,FX-INR
+530,StrikeX,STRX-INR
+531,Sweat Economy,SWEAT-INR
+532,Streamr,DATA-INR
+533,Forta,FORT-INR
+534,Gaimin,GMRX-INR
+535,Alchemix,ALCX-INR
+536,Linear Finance,LINA-INR
+537,Orion,ORN-INR
+538,Numbers Protocol,NUM-INR
+539,Bitgert,BRISE-INR
+540,FUNToken,FUN-INR
+541,Cream Finance,CREAM-INR
+542,Victoria VR,VR-INR
+543,DEXTools,DEXT-INR
+544,PlayDapp,PDA-INR
+545,DIMO,DIMO-INR
+546,MEMETOON,MEME-INR
+547,Wirex Token,WXT-INR
+548,Beta Finance,BETA-INR
+549,Artificial Liquid Intelligence,ALI-INR
+550,Carry,CRE-INR
+551,Moon Tropica,CAH-INR
+552,district0x,DNT-INR
+553,Energy Web Token,EWT-INR
+554,Verasity,VRA-INR
+555,KWD,KWD-INR
+556,Wanchain,WAN-INR
+557,Reef,REEF-INR
+558,Ultima,ULTIMA-INR
+559,Measurable Data Token,MDT-INR
+560,Lyra,LYRA-INR
+561,Uquid Coin,UQC-INR
+562,Mdex,MDX-INR
+563,PaLM AI,PALM-INR
+564,IDEX,IDEX-INR
+565,Contentos,COS-INR
+566,DIA,DIA-INR
+567,Alitas,ALT-INR
+568,IAGON,IAG-INR
+569,Enzyme,MLN-INR
+570,BINR,BINR-INR
+571,DeFi Pulse Index,DPI-INR
+572,Clash of Lilliput,COL-INR
+573,COMBO,COMBO-INR
+574,Staika,STIK-INR
+575,Onyxcoin,XCN-INR
+576,The Root Network,ROOT-INR
+577,Constellation,DAG-INR
+578,Polymath,POLY-INR
+579,Propbase,PROPS-INR
+580,Grok,GROK-INR
+581,Cornucopias,COPI-INR
+582,Opulous,OPUL-INR
+583,DeFiChain,DFI-INR
+584,Everscale,EVER-INR
+585,Veno Finance,VNO-INR
+586,Harvest Finance,FARM-INR
+587,Venus XVS,vXVS-INR
+588,Hunt Town,HUNT-INR
+589,SingularityDAO,SDAO-INR
+590,5ire,5IRE-INR
+591,Dego Finance,DEGO-INR
+592,Artrade,ATR-INR
+593,Propchain,PROPC-INR
+594,Games for a Living,GFAL-INR
+595,Komodo,KMD-INR
+596,Meter Governance,MTRG-INR
+597,Bitcoin Palladium,BTCP-INR
+598,Strike,STRK-INR
+599,xMoney,UTK-INR
+600,ThunderCore,TT-INR
+601,IRISnet,IRIS-INR
+602,Anchored Coins AEUR,AEUR-INR
+603,Dynex,DNX-INR
+604,League of Kingdoms Arena,LOKA-INR
+605,Venus BINR,vBINR-INR
+606,Botto,BOTTO-INR
+607,Statter Network,STT-INR
+608,Steem Dollars,SBD-INR
+609,CEEK VR,CEEK-INR
+610,MATH,MATH-INR
+611,Dora Factory,DORA-INR
+612,Aleph.im,ALEPH-INR
+613,Dero,DERO-INR
+614,Astrafer,ASTRAFER-INR
+615,RAMP,RAMP-INR
+616,FirmaChain,FCT-INR
+617,Pirate Chain,ARRR-INR
+618,Shrapnel,SHRAP-INR
+619,Kin,KIN-INR
+620,ArchLoot,ALT-INR
+621,PLANET,PLANET-INR
+622,Persistence One,XPRT-INR
+623,Niza Global,NIZA-INR
+624,Clore.ai,CLORE-INR
+625,Litentry,LIT-INR
+626,Bonfida,FIDA-INR
+627,Voxies,VOXEL-INR
+628,PAID Network,PAID-INR
+629,Groestlcoin,GRS-INR
+630,RichQUACK.com,QUACK-INR
+631,DEAPcoin,DEP-INR
+632,Sologenic,SOLO-INR
+633,Gelato,GEL-INR
+634,Quickswap [New],QUICK-INR
+635,Kwenta,KWENTA-INR
+636,Cratos,CRTS-INR
+637,Sentinel Protocol,UPP-INR
+638,Vertex Protocol,VRTX-INR
+639,Kishu Inu,KISHU-INR
+640,Impossible Finance Launchpad,IDIA-INR
+641,Assemble Protocol,ASM-INR
+642,pSTAKE Finance,PSTAKE-INR
+643,Coreum,COREUM-INR
+644,Solend,SLND-INR
+645,SelfKey,KEY-INR
+646,Solchat,CHAT-INR
+647,APX,APX-INR
+648,Suku,SUKU-INR
+649,Circuits of Value,COVAL-INR
+650,Turbo,TURBO-INR
+651,Doge Killer,LEASH-INR
+652,Tenset,10SET-INR
+653,e-Radix,EXRD-INR
+654,Reserve,RSV-INR
+655,Neom,NEOM-INR
+656,cheqd,CHEQ-INR
+657,Smart Layer Network,SLN-INR
+658,Celsius,CEL-INR
+659,EURC,EURC-INR
+660,Morpheus.Network,MNW-INR
+661,Green Satoshi Token (SOL),GST-INR
+662,Cere Network,CERE-INR
+663,Concordium,CCD-INR
+664,Biswap,BSW-INR
+665,Moss Coin,MOC-INR
+666,HOPR,HOPR-INR
+667,Hacken Token,HAI-INR
+668,NFT Worlds,WRLD-INR
+669,Vega Protocol,VEGA-INR
+670,smARTOFGIVING,AOG-INR
+671,sINR,SINR-INR
+672,Router Protocol,ROUTE-INR
+673,Stratos,STOS-INR
+674,Only1,LIKE-INR
+675,ELYSIA,EL-INR
+676,Bitcoin Dominica,BTCD-INR
+677,XCAD Network,XCAD-INR
+678,Lumerin,LMR-INR
+679,Moonchain,MXC-INR
+680,PolySwarm,NCT-INR
+681,SLG.GAMES,SLG-INR
+682,Vara Network,VARA-INR
+683,StaFi,FIS-INR
+684,ASD,ASD-INR
+685,Vectorspace AI,VXV-INR
+686,Alpha Quark Token,AQT-INR
+687,KYVE Network,KYVE-INR
+688,Unifi Protocol DAO,UNFI-INR
+689,Graphlinq Chain,GLQ-INR
+690,ZKFair,ZKF-INR
+691,Whiteheart,WHITE-INR
+692,Shapeshift FOX Token,FOX-INR
+693,Stronghold Token,SHX-INR
+694,MUX Protocol,MCB-INR
+695,iMe Lab,LIME-INR
+696,Farcana,FAR-INR
+697,AVA,AVA-INR
+698,Cetus Protocol,CETUS-INR
+699,Metacraft,MCT-INR
+700,ZTX,ZTX-INR
+701,ALTAVA,TAVA-INR
+702,Isiklar Coin,ISIKC-INR
+703,Altura,ALU-INR
+704,Decubate,DCB-INR
+705,Syncus,SYNC-INR
+706,UniLend,UFT-INR
+707,Keep3rV1,KP3R-INR
+708,Zano,ZANO-INR
+709,AhaToken,AHT-INR
+710,Tranchess,CHESS-INR
+711,TNC Coin,TNC-INR
+712,RocketX exchange,RVF-INR
+713,QuickSwap [Old],QUICK-INR
+714,Taraxa,TARA-INR
+715,XPR Network,XPR-INR
+716,BurgerCities,BURGER-INR
+717,FC Barcelona Fan Token,BAR-INR
+718,Qredo,QRDO-INR
+719,ViciCoin,VCNT-INR
+720,PARSIQ,PRQ-INR
+721,AdEx,ADX-INR
+722,PIVX,PIVX-INR
+723,Aurory,AURY-INR
+724,Velas,VLX-INR
+725,AVINOC,AVINOC-INR
+726,Dejitaru Tsuka,TSUKA-INR
+727,Akropolis,AKRO-INR
+728,Tether EURt,EURt-INR
+729,Nuco.cloud,NCDT-INR
+730,Paris Saint-Germain Fan Token,PSG-INR
+731,WiFi Map,WIFI-INR
+732,Katana Inu,KATA-INR
+733,Nine Chronicles,WNCG-INR
+734,VIDT DAO,VIDT-INR
+735,AirDAO,AMB-INR
+736,Dock,DOCK-INR
+737,Celo Dollar,CINR-INR
+738,Across Protocol,ACX-INR
+739,OctaSpace,OCTA-INR
+740,Decimal,DEL-INR
+741,CENNZnet,CENNZ-INR
+742,Mango,MNGO-INR
+743,Pitbull,PIT-INR
+744,Alpaca Finance,ALPACA-INR
+745,Blocksquare Token,BST-INR
+746,Scallop,SCLP-INR
+747,Minswap,MIN-INR
+748,Samoyedcoin,SAMO-INR
+749,Aura Finance,AURA-INR
+750,XSGD,XSGD-INR
+751,Carrieverse,CVTX-INR
+752,Swarm Markets,SMT-INR
+753,Synesis One,SNS-INR
+754,HELLO Labs,HELLO-INR
+755,Ampleforth,AMPL-INR
+756,Kryll,KRL-INR
+757,VITE,VITE-INR
+758,DeRace,DERC-INR
+759,BADMAD ROBOTS,METAL-INR
+760,AIT Protocol,AIT-INR
+761,FIO Protocol,FIO-INR
+762,Starlink,STARL-INR
+763,Creo Engine,CREO-INR
+764,OORT,OORT-INR
+765,Orange,ORNJ-INR
+766,Venus INRT,vINRT-INR
+767,FONSmartChain,FON-INR
+768,Beefy,BIFI-INR
+769,Bloktopia,BLOK-INR
+770,Helium IOT,IOT-INR
+771,NuNet,NTX-INR
+772,Kava Lend,HARD-INR
+773,Sperax,SPA-INR
+774,Hatom,HTM-INR
+775,Wing Finance,WING-INR
+776,Crypto Asset Governance Alliance,CAGA-INR
+777,WAGMI Games,WAGMIGAMES-INR
+778,WeBuy,WE-INR
+779,Nodle,NODL-INR
+780,OmniFlix Network,FLIX-INR
+781,Tectonic,TONIC-INR
+782,Connex,CONX-INR
+783,BarnBridge,BOND-INR
+784,UFO Gaming,UFO-INR
+785,Sentinel,DVPN-INR
+786,Santos FC Fan Token,SANTOS-INR
+787,Student Coin,STC-INR
+788,Onomy Protocol,NOM-INR
+789,Inverse Finance,INV-INR
+790,Abelian,ABEL-INR
+791,S.S. Lazio Fan Token,LAZIO-INR
+792,RabbitX,RBX-INR
+793,Inspect,INSP-INR
+794,Cellframe,CELL-INR
+795,GameGPT,DUEL-INR
+796,Swarm,BZZ-INR
+797,TROY,TROY-INR
+798,GameSwift,GSWIFT-INR
+799,Klever,KLV-INR
+800,Shiba Predator,QOM-INR
