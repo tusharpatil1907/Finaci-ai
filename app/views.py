@@ -31,10 +31,24 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
-
+# pre defined function for downloading multiple symbols at same time at faster speed
+def download_data(tickers,period,interval):
+    dfs = []
+    for ticker in tickers:
+        df = yf.download(tickers=ticker, period=period, threads=True, interval=interval)
+        df['Change'] = df['Close'] - df['Open']  # Calculate change        
+        df.insert(0, "Ticker", ticker)
+        dfs.append(df)
+    df_concat = pd.concat(dfs, axis=0)
+    df_concat.reset_index(level=0, inplace=True)
+    df_concat.columns = ['Date', 'Ticker', 'Open', 'High', 'Low', 'Close', 'Adj_Close', 'Volume', 'Change']
+    df_concat.drop('Date', axis=1, inplace=True)
+    records = df_concat.reset_index().to_json(orient='records')
+    return records
+    
 # @login_required(login_url='/user/login/')
 def index(request):
-    tickers=['AAPL', 'AMZN', 'QCOM', 'META', 'NVDA', 'JPM','TCS.NS','INFY.NS','RELIANCE.NS','BTC-USD','ETH-USD','SOL-USD','XRP-USD','^NSEI']
+    tickers=['AAPL', 'AMZN', 'QCOM', 'META', 'NVDA', 'JPM','TCS.NS','INFY.NS','RELIANCE.NS','BTC-USD','ETH-USD','SOL-USD','XRP-USD','^NSEI','^BSESN']
     data = yf.download(
         tickers,
         group_by='ticker',
@@ -42,13 +56,21 @@ def index(request):
         period='5y', 
         interval='1d'
     )
-
+    index_data= yf.Ticker(
+        '^NSEI',
+    )
+    nifty_current = "₹ {:,.2f} /-".format(index_data.history(period='1d')['Close'].iloc[-1])
+    index_data= yf.Ticker(
+        '^BSESN',
+    )
+    sensex_current = "₹ {:,.2f} /-".format(index_data.history(period='1d')['Close'].iloc[-1])
     data.reset_index(level=0, inplace=True)
 
     fig_left = go.Figure()
     fig_right = go.Figure()
     fig_crypto = go.Figure()
-    fig_index = go.Figure()
+    fig_nifty = go.Figure()
+    fig_sensex = go.Figure()
 
     for ticker in tickers:
         if ticker in data.columns.levels[0]:
@@ -68,20 +90,35 @@ def index(request):
             elif ticker in ['BTC-USD','ETH-USD','SOL-USD','XRP-USD']:
                 fig_crypto.add_trace(go.Scatter(x=data['Date'], y=adj_close, name=ticker))
             elif ticker in ['^NSEI']:
-                print(ticker)
-                fig_index.add_trace(go.Scatter(x=data['Date'], y=adj_close, name=ticker))
+                # print(ticker)
+                # fig_nifty.add_trace(go.scatter(x=data['Date'], y=adj_close, name=ticker))
+                fig_nifty.add_trace(go.Candlestick( x=data['Date'], open=open,
+                high=high,
+                low=low,
+                close=adj_close, name=ticker))
+
+            elif ticker in ['^BSESN']:
+                # print(ticker)
+                # fig_index.add_trace(go.scatter(x=data['Date'], y=adj_close, name=ticker))
+                fig_sensex.add_trace(go.Candlestick( x=data['Date'], open=open,
+                high=high,
+                low=low,
+                close=adj_close, name=ticker))
 
     fig_left.update_layout(paper_bgcolor="#14151b", plot_bgcolor="#14151b", font_color="white")
     fig_right.update_layout(paper_bgcolor="#14151b", plot_bgcolor="#14151b", font_color="white")
     fig_crypto.update_layout(paper_bgcolor="#14151b", plot_bgcolor="#14151b", font_color="white")
-    fig_index.update_layout(paper_bgcolor="#14151b", plot_bgcolor="#14151b", font_color="white")
+    fig_nifty.update_layout(paper_bgcolor="#14151b", plot_bgcolor="#14151b", font_color="white")
+    fig_sensex.update_layout(paper_bgcolor="#14151b", plot_bgcolor="#14151b", font_color="white")
 
     plot_div_left = plot(fig_left, auto_open=False, output_type='div')
     plot_div_right = plot(fig_right, auto_open=False, output_type='div')
     plot_div_crypto = plot(fig_crypto, auto_open=False, output_type='div')
-    plot_div_index = plot(fig_index, auto_open=False, output_type='div')
+    plot_div_index = plot(fig_nifty, auto_open=False, output_type='div',)
+    plot_div_sensex = plot(fig_sensex, auto_open=False, output_type='div')
     return render(request, 'index.html',{ 'plot_div_left': plot_div_left,
-        'plot_div_right': plot_div_right,'plot_div_crypto':plot_div_crypto,'plot_div_index':plot_div_index})
+        'plot_div_right': plot_div_right,'plot_div_crypto':plot_div_crypto,'plot_div_index':plot_div_index,
+        'plot_div_sensex':plot_div_sensex, 'nifty_current':nifty_current,'sensex_current':sensex_current})
     # ================================================= Left Card Plot =========================================================
     # Here we use yf.download function
 
@@ -143,6 +180,9 @@ def fetch_data(request):
     # Crypto
     crypto_symbols = ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']
     crypto = download_and_process(crypto_symbols)
+    
+    
+    
    
     print(time.time() - start)
     data= {
@@ -150,7 +190,8 @@ def fetch_data(request):
         # 'plot_div_right': plot_div_right,
         'recent_stocks': recent_stocks,
         'recent_indian_stocks': recent_indian_stocks,
-        'crypto': crypto
+        'crypto': crypto,
+        # 'index':index,
     }
     # ========================================== Page Render section =====================================================
     return JsonResponse(data)
@@ -587,9 +628,9 @@ def predict_cryp(request, ticker_value, number_of_days):
 
     Crypto_data = yf.Ticker(ticker_value,).info
     Crypto_data2 = yf.Ticker(ticker_value,).news
-    print(Crypto_data2)
+    # print(Crypto_data2)
     Symbol = ticker_value.upper
-    Name = Crypto_data.get('LongName')
+    Name = Crypto_data.get('name')
     currency = Crypto_data.get('toCurrency')
     fiftyTwoWeekHigh = "₹ {:,.2f} /-".format(Crypto_data.get('fiftyTwoWeekHigh'))
     fiftyTwoWeekLow = "₹ {:,.2f} /-".format(Crypto_data.get('fiftyTwoWeekLow'))
@@ -600,24 +641,47 @@ def predict_cryp(request, ticker_value, number_of_days):
     dividends = Crypto_data.get('lastDividendValue')
     Volume = " {:,.2f} .".format(Crypto_data.get('regularMarketVolume'))
     currentPrice = Crypto_data.get('previousClose')
+    desc = Crypto_data.get('description')
+
+    previousClose= Crypto_data.get('previousClose')
+    crp_open = Crypto_data.get('open')
+    dayLow = Crypto_data.get('dayLow')
+    dayHigh = Crypto_data.get('dayHigh')
+    regularMarketPreviousClose = Crypto_data.get('regularMarketPreviousClose')
+    regularMarketOpen = Crypto_data.get('regularMarketOpen')
+    regularMarketDayLow = Crypto_data.get('regularMarketDayLow')
+    regularMarketDayHigh = Crypto_data.get('regularMarketDayHigh')
 
 
-    context={ 'plot_div': plot_div,                                                    'confidence' : confidence,'forecast': forecast,'ticker_value':ticker_value,'number_of_days':number_of_days,'plot_div_pred':plot_div_pred,
-             'Symbol':Symbol,
-                                                    'Name':Name,
-                                                    'currency':currency,
-                                                    'fiftyTwoWeekHigh':fiftyTwoWeekHigh,
-                                                    'fiftyDayAverage':fiftyDayAverage,
-                                                    'fiftyTwoWeekLow':fiftyTwoWeekLow,'Market_Cap':Market_Cap,
-                                                    'dividends':dividends,
-                                                    'currentPrice':currentPrice,
-                                                    'Volume':Volume,
+
+
+
+
+    # print(Crypto_data['365_MA'])
+    # Crypto_data['365_MA'] = Crypto_data['Open'].rolling(window=365).mean()
+    
+
+
+    # Create the interactive plot with Plotly
+    # fig = go.Figure()
+    # fig.add_trace(go.Scatter(x=Crypto_data.index, y=Crypto_data['Close'], mode='lines', name='Close Price'))
+    # fig.add_trace(go.Scatter(x=Crypto_data.index, y=Crypto_data['365_MA'], mode='lines', name='1-Year Moving Average', line=dict(color='orange')))
+    
+    # fig.update_layout(title=f'{ticker} Stock Price and 1-Year Moving Average',
+    #                   xaxis_title='Date',
+    #                   yaxis_title='Price')
+    
+    # # Convert the plotly figure to HTML
+    # graph_html = fig.to_html(full_html=False)
+
+
+    context={ 'plot_div': plot_div,'confidence' : confidence,'forecast': forecast,'ticker_value':ticker_value,'number_of_days':number_of_days,'plot_div_pred':plot_div_pred,'Symbol':Symbol,'Name':Name,'currency':currency,'fiftyTwoWeekHigh':fiftyTwoWeekHigh,'fiftyDayAverage':fiftyDayAverage,'fiftyTwoWeekLow':fiftyTwoWeekLow,'Market_Cap':Market_Cap,'dividends':dividends,'currentPrice':currentPrice,'Volume':Volume,'desc':desc,'previousClose':previousClose,'crp_open':crp_open,'dayLow':dayLow,'dayHigh':dayHigh,'regularMarketPreviousClose':regularMarketPreviousClose,'regularMarketOpen':regularMarketOpen,'regularMarketDayLow':regularMarketDayLow,'regularMarketDayHigh':regularMarketDayHigh, # 'graph_html':graph_html
 }                                                   
     
 
 
     
-    return render(request,'result.html',context)
+    return render(request,'crp_result.html',context)
 
 
 
@@ -725,7 +789,7 @@ def signup(request):
         if password1 == password2:
             if User.objects.filter(username=username).exists():
                 # errors['username'] = 'This username is already taken.'
-                return HttpResponse('An account with this username already exists.')
+                # return HttpResponse('An account with this username already exists.')
                 time.sleep(2)
                 return redirect('login')
             if User.objects.filter(email=email).exists():
@@ -737,7 +801,7 @@ def signup(request):
                 user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username,
                                                 email=email, password=password1)
                 user.save()
-                login(request, user)
+                auth_login(request, user)
                 return redirect('/')
         else:
             return HttpResponse('pass dont match')

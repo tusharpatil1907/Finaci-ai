@@ -50,19 +50,38 @@
                     <div class="col-sm-12 col-xl-12">
                         <div class="bg-secondary text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h4 class="mb-0 text-success">NIFTY 50</h4>
+                                   
+                                <h4 class="mb-0 text-success">NIFTY 50. ( {{nifty_current}} )</h4>
+                                <h4 class="mb-0 text-success">SENSEX ({{sensex_current}} )</h4>
                                 <a href="">Show All</a>
                             </div>
                             <div class="row py-4">
-                                {% block index_charts %}
-
-                                {% autoescape off %}
-                                
-                                {{ plot_div_index }}
-    
-                                {% endautoescape %}
-    
-                                {% endblock index_charts %}
+                                {% block nifty_chart %}
+                                <div class="col-md-6">
+                                    
+                                    {% autoescape off %}
+                                    
+                                    {{ plot_div_index }}
+                                    
+                                    {% endautoescape %}
+                                    
+                                </div>
+                                {% endblock nifty_chart %}
+                                <!-- <div class="col-md-6" id="my-div">
+                                    
+                                </div> -->
+                                {% block sensex_chart %}
+                                <div class="col-md-6">
+                                    
+                                    {% autoescape off %}
+                                    
+                                    {{ plot_div_sensex }}
+                                    
+                                    
+                                    {% endautoescape %}
+                                    
+                                </div>
+                                    {% endblock sensex_chart %}
                                 
                                 <!-- <div class="col-md-6" id="my-div">
                                 

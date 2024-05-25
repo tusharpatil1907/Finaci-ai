@@ -68,13 +68,8 @@
                 <div class="navbar-nav w-100">
                     <a href="../" class="nav-item nav-link"><i class="fa fa-home me-2"></i>Home</a>
                     <a href="#" class="nav-item nav-link active"><i class="fa fa-search me-2"></i>Predict</a>
-<<<<<<< HEAD
                     <a href="/ticker/" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>Ticker list</a>
                     <a href="/ticker/crypto/" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>Crypto list</a>
-=======
-                    <a href="/ticker/" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>Stocks Info</a>
-                    <a href="/ticker/crypto/" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>Crypto Info</a>
->>>>>>> eebb69eae0c707218f476df51f67ff2390300ee8
                 </div>
             </nav>
         </div>
@@ -189,12 +184,12 @@
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="tickerinp" placeholder="Ticker Name"
+                                    <input type="text" class="form-control" id="cr-tickerinp" placeholder="Ticker Name"
                                         name="ticker" autocomplete="on" required>
                                     <label for="tickerinp">Ticker Name</label>
                                 </div>
                                 <div class="form-floating mb-4">
-                                    <input type="text" class="form-control" id="days" placeholder="Number of days"
+                                    <input type="text" class="form-control" id="cr-days" placeholder="Number of days"
                                         name="days" autocomplete="on" required>
                                     <label for="days">Number of Days</label>
                                 </div>
@@ -205,10 +200,10 @@
                                     onclick="LoadURL()">Predict</button>
                                 <script type="text/javascript">
                                     function LoadURL() {
-                                        var ticker = document.getElementById("tickerinp").value;
-                                        var days = document.getElementById("days").value;
+                                        var ticker = document.getElementById("cr-tickerinp").value;
+                                        var days = document.getElementById("cr-days").value;
                                         var server = window.location.origin;
-                                        var path = "/predict/" + ticker + "/" + days;
+                                        var path = "/predict/crypto/" + ticker + "/" + days;
                                         var url = server + path;
                                         window.location.href = url;
                                     }

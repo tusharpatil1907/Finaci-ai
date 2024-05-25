@@ -1,0 +1,379 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+  <title>Finaci-Ai</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'image/dollar_icon.png' %}">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <!-- Template Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .signal-box {
+            width: 250px;
+            padding: 20px;
+            background-color: green;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 50px auto;
+        }
+        .buy-signal {
+            color: #70c273;
+            
+        }
+        .sell-signal {
+            color: #f44336;
+        }
+        .signal-text {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+        .comment{
+            font-style: 8px;
+            font-weight: bold;
+            color: whitesmoke;
+        }
+    </style>
+    <!-- charts  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-secondary navbar-dark">
+                <a href="../../../" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-success"><i class="fa fa-user-edit me-2"></i>Finaci-Ai</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="{% static 'image/user.png' %}" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Welcome</h6>
+                        <span>{{user.username}}</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="../../../" class="nav-item nav-link"><i class="fa fa-home me-2"></i>Home</a>
+                    <a href="/search" class="nav-item nav-link active"><i class="fa fa-search me-2"></i>Predict</a>
+                    <a href="/ticker" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>Ticker Info</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+                <a href="../../../" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                
+                <div class="navbar-nav align-items-center ">
+                    <div class="nav-item dropdown">
+                        {% if user.is_authenticated %}
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="{% static 'image/user.png' %}" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">{{user.username}}</span>
+                        </a> 
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="/user/logout/" class="dropdown-item text-danger">Logout</a>
+                            <a href="/search" class="dropdown-item">Predict</a>
+                            <a href="/ticker" class="dropdown-item">Ticker Info</a>
+                        </div>
+
+                        {% else %}
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="{% static 'image/user.png' %}" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">Guest user</span>
+                        </a> 
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="/user/login/" class="dropdown-item text-danger">Login/signup</a>
+                            <a href="/search" class="dropdown-item">Predict</a>
+                            <a href="/ticker" class="dropdown-item">Ticker Info</a>
+                        </div>
+                        {% endif %}
+                        
+                    </div>
+                    <!-- <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="{% static 'image/user.png' %}" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">{{user.username}}</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="user/logout/" class="dropdown-item text-danger">Logout</a>
+                            <a href="/search" class="dropdown-item">Predict</a>
+                            <a href="/ticker" class="dropdown-item">Ticker Info</a>
+                        </div>
+                    </div> -->
+                </div>
+            </nav>
+            <!-- Navbar End -->
+
+
+            <!-- Start of Main Content -->
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-8">
+                        <div class="bg-secondary text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h5 class="mb-0">Detailed overview of {{Name}}.</h5>
+                                <a href="https://finance.yahoo.com/quote/{{ticker_value}}?p={{ticker_value}}">Show More</a>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table text-start align-middle table-bordered table-hover mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <td>Symbol</td>
+                                            <td>{{Symbol}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td>{{Name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Volume</td>
+                                            <td>{{Volume}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>previous Closing of candle</td>
+                                            <td>{{previousClose}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Today's opening.</td>
+                                            <td>{{crp_open}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Today's Low</td>
+                                            <td>{{dayLow}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Today's High</td>
+                                            <td>{{dayHigh}}</td>
+                                        </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h5 class="mb-0">Detailed overview of {{Name}}.</h5>
+                            <a href="https://finance.yahoo.com/quote/{{ticker_value}}?p={{ticker_value}}">Show More</a>
+                        </div>
+                         <p class="h6 fw-light"> <i> {{desc | safe}}</i></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h5 class="mb-0">Recent data of {{ticker_value}}</h5>
+                                <a href="https://finance.yahoo.com/quote/{{ticker_value}}/chart?p={{ticker_value}}#">
+                                    Show More
+                                </a>
+                            </div>
+                            {% block Left_Plot %}
+
+                                {% autoescape off %}
+                                    {{ plot_div }}
+                                {% endautoescape %}
+
+                            {% endblock Left_Plot %}
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Predicted Stock price of {{ticker_value}} for next {{number_of_days}} days</h6>
+                            </div>
+                            {% block Right_Plot %}
+
+                                {% autoescape off %}
+                                    {{ plot_div_pred }}
+                                {% endautoescape %}
+
+                            {% endblock Right_Plot %}
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        
+                            
+
+
+                        <!-- #4caf50 -->
+                        
+                        
+                    </div>
+                    <div class="col-md-9 col-sm-12">
+                        <div class="bg-secondary text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h5 class="mb-0"> Detailed Financials of {{Name}}.
+                                </h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="table-responsive">
+                                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Symbol</td>
+                                                    <td>{{Symbol}}</td>
+                                                    <td>Current Price</td>
+                                                    <td>{{currentPrice}}</td>
+                                                       
+                                                </tr>
+                                                <!-- <tr>
+                                                    
+                                                    <td>Current Price</td>
+                                                    <td>{{currentPrice}}</td>
+                                                </tr> -->
+                                                <tr>
+                                                    <td>Regular Market Previous Close</td>
+                                                    <td>{{regularMarketPreviousClose}}</td>
+                                                    <td>One year high (52 Weeks)</td>
+                                                    <td>{{fiftyTwoWeekHigh}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Regular market opening rate</td>
+                                                    <td>{{regularMarketOpen}}</td>
+                                                    <td>One year Low (52 Weeks) </td>
+                                                    <td>{{fiftyTwoWeekLow}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Regular Market Day Low</td>
+                                                    <td>{{regularMarketDayLow}}</td>
+                                                    <td>50 Day Moving Average</td>
+                                                    <td>{{fiftyDayAverage}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Regular Market Day High</td>
+                                                    <td>{{regularMarketDayHigh}}</td>
+                                                    <td>200 Days Moving Average</td>
+                                                    <td>{{twoHundredDayAverage}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profit Margins</td>
+                                                    <td>{{profitMargins}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Average Volume</td>
+                                                    <td>{{averageVolume}}</td>
+                                                </tr>
+
+
+                                                  {% comment %} 'regularMarketPreviousClose':regularMarketPreviousClose,'regularMarketOpen':regularMarketOpen,'regularMarketDayLow':regularMarketDayLow,'regularMarketDayHigh':regularMarketDayHigh, {% endcomment %}
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- End of Main Content -->
+
+
+           <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            Developed by:<a href="https://github.com/tusharpatil1907/">Tushar patil</a>
+
+                        </div>
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                            Designed By <a href="https://rushikeshthakur.netlify.app">Rushikesh Thakur</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-success btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/chart/chart.min.js' %}"></script>
+    <!-- <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script> -->
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
