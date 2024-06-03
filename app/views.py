@@ -521,7 +521,7 @@ def predict(request, ticker_value, number_of_days):
                                                     })
 
 
-
+@login_required(login_url='/user/login/')
 def predict_cryp(request, ticker_value, number_of_days):
     try:
         
@@ -801,8 +801,8 @@ def signup(request):
                 user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username,
                                                 email=email, password=password1)
                 user.save()
-                auth_login(request, user)
-                return redirect('/')
+                # auth_login(request, user)
+                return redirect('/user/login')
         else:
             return HttpResponse('pass dont match')
 
