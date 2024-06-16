@@ -291,7 +291,7 @@ def search(request):
 
 
 # The Predict Function to implement Machine Learning as well as Plotting
-@login_required(login_url='/user/login/')
+# @login_required(login_url='/user/login/')
 def predict(request, ticker_value, number_of_days):
     try:
         
@@ -521,7 +521,7 @@ def predict(request, ticker_value, number_of_days):
                                                     })
 
 
-@login_required(login_url='/user/login/')
+# @login_required(login_url='/user/login/')
 def predict_cryp(request, ticker_value, number_of_days):
     try:
         
@@ -775,56 +775,56 @@ def filter_stocks(query):
     return results
 
 
-# user authintication
-def signup(request):
-    if request.method == 'POST':
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        username = request.POST['username']
-        email = request.POST['email']
-        password1 = request.POST['password1']
-        password2 = request.POST['password2']
-        user = authenticate(username=username, password1=password1, password2=password2)
+# # user authintication
+# def signup(request):
+#     if request.method == 'POST':
+#         first_name = request.POST['first_name']
+#         last_name = request.POST['last_name']
+#         username = request.POST['username']
+#         email = request.POST['email']
+#         password1 = request.POST['password1']
+#         password2 = request.POST['password2']
+#         user = authenticate(username=username, password1=password1, password2=password2)
 
-        if password1 == password2:
-            if User.objects.filter(username=username).exists():
-                # errors['username'] = 'This username is already taken.'
-                # return HttpResponse('An account with this username already exists.')
-                time.sleep(2)
-                return redirect('login')
-            if User.objects.filter(email=email).exists():
-                return HttpResponse('An account with this email already exists.')
-                time.sleep(2)
-                return redirect('login')
+#         if password1 == password2:
+#             if User.objects.filter(username=username).exists():
+#                 # errors['username'] = 'This username is already taken.'
+#                 # return HttpResponse('An account with this username already exists.')
+#                 time.sleep(2)
+#                 return redirect('login')
+#             if User.objects.filter(email=email).exists():
+#                 return HttpResponse('An account with this email already exists.')
+#                 time.sleep(2)
+#                 return redirect('login')
 
-            else:
-                user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username,
-                                                email=email, password=password1)
-                user.save()
-                # auth_login(request, user)
-                return redirect('/user/login')
-        else:
-            return HttpResponse('pass dont match')
+#             else:
+#                 user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username,
+#                                                 email=email, password=password1)
+#                 user.save()
+#                 # auth_login(request, user)
+#                 return redirect('/user/login')
+#         else:
+#             return HttpResponse('pass dont match')
 
-    return render(request, 'registration/sign_up.html')
+#     return render(request, 'registration/sign_up.html')
 
 
-def logout_user(request):
-    logout(request)
-    return redirect('/')
+# def logout_user(request):
+#     logout(request)
+#     return redirect('/')
     
-def login(request):
-    if request.method=='POST':
+# def login(request):
+#     if request.method=='POST':
 
-        username = request.POST.get('uname')
-        password = request.POST.get('pass')
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            auth_login(request, user)
-            print('success')
-            return redirect('/')    
-        return render(request, 'registration/login.html', {'error_message': 'Invalid login'})
-    return render(request,'registration/login.html')
+#         username = request.POST.get('uname')
+#         password = request.POST.get('pass')
+#         user = authenticate(request, username=username, password=password)
+#         if user is not None:
+#             auth_login(request, user)
+#             print('success')
+#             return redirect('/')    
+#         return render(request, 'registration/login.html', {'error_message': 'Invalid login'})
+#     return render(request,'registration/login.html')
 
 
 def about(request):
