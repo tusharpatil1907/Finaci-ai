@@ -351,7 +351,7 @@ def predict(request, ticker_value, number_of_days):
 
 
     try:
-        df_ml = yf.download(tickers = ticker_value, period='3y', interval='1d')
+        df_ml = yf.download(tickers = ticker_value, period='2y', interval='1d')
     except:
         ticker_value = 'AAPL'
         df_ml = yf.download(tickers = ticker_value, period='2y', interval='1d')
