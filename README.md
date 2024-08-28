@@ -1,6 +1,6 @@
 [//]: # (Hello welcome to my project 
   This project is already uploaded to my GitHub Account where I have deployed this project
-  You can find the project here: https://github.com/Kumar-laxmi/Stock-Prediction-System-Application
+  
 )
 
 <img src="./app/static/image/banner.png" alt="STOCK MARKET PREDICTION">
@@ -86,12 +86,12 @@
 ## Project Installation:
 **STEP 1:** Clone the repository from GitHub.
 ```bash
-  git clone https://github.com/Kumar-laxmi/Stock-Prediction-System-Application.git
+  git clone https://github.com/tusharpatil1907/Finaci-ai.git
 ```
 
 **STEP 2:** Change the directory to the repository.
 ```bash
-  cd Stock-Prediction-System-Application
+  cd Finaci-ai
 ```
 
 **STEP 3:** Create a virtual environment
