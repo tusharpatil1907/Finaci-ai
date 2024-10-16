@@ -15,7 +15,7 @@ import json
 import yfinance as yf
 
 import datetime as dt,datetime
-# import datetime
+
 
 import queue  
 import concurrent.futures
@@ -733,7 +733,8 @@ def get_last_n_years_data(ticker, n):
     # })
 # def search_tickers(request):
 def ticker(request):
-    if request.is_ajax():
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+
         query = request.GET.get('query')
         if query:
             results = filter_stocks(query)   
@@ -750,7 +751,8 @@ def ticker(request):
 
 def crypto_ticker(request):
 
-    if request.is_ajax():
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+
         query = request.GET.get('query')
         if query:
             results = filter_stocks(query)   
